@@ -1,0 +1,82 @@
+{
+  "name": "which-terminal",
+  "displayName": "Which Terminal?",
+  "description": "Makes changing/opening new/default terminal more convenient.",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.30.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.changeDefaultTerminal"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Which Terminal?",
+      "properties": {
+        "whichTerminal.windowsTerminals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "shell": {
+                "type": "string"
+              },
+              "shellArgs": {
+                "type": [
+                  "array",
+                  "null"
+                ],
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "shell"
+            ]
+          },
+          "default": [
+            {
+              "title": "cmd",
+              "shell": "cmd.exe"
+            },
+            {
+              "title": "powershell",
+              "shell": "powershell.exe"
+            }
+          ]
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.changeDefaultTerminal",
+        "title": "Which Terminal: Change default terminal"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test"
+  },
+  "devDependencies": {
+    "typescript": "^3.3.1",
+    "vscode": "^1.1.28",
+    "tslint": "^5.12.1",
+    "@types/node": "^10.12.21",
+    "@types/mocha": "^2.2.42"
+  }
+}
