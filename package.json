@@ -10,14 +10,14 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.changeDefaultTerminal"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "configuration": {
       "title": "Which Terminal?",
       "properties": {
-        "whichTerminal.windowsTerminals": {
+        "which-terminal.windowsTerminals": {
           "type": "array",
           "items": {
             "type": "object",
@@ -62,6 +62,10 @@
       {
         "command": "extension.changeDefaultTerminal",
         "title": "Which Terminal: Change default terminal"
+      },
+      {
+        "command": "extension.openTerminal",
+        "title": "Which Terminal: Open terminal"
       }
     ]
   },
@@ -78,5 +82,8 @@
     "tslint": "^5.12.1",
     "@types/node": "^10.12.21",
     "@types/mocha": "^2.2.42"
+  },
+  "dependencies": {
+    "vscode-nls": "^4.1.0"
   }
 }
