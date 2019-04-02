@@ -3,37 +3,47 @@ import * as nls from "vscode-nls";
 
 import { Terminal, isTerminal } from "./model/terminal";
 import { DefaultTerminal } from "./defaults/defaultTerminal";
+import { DefaultContext } from "./defaults/defaultContext";
+import { Alignment } from "./model/configuration";
 
-let localize: nls.LocalizeFunc;
+const me = new DefaultContext(); // Empty context.
 
 export function activate(context: vscode.ExtensionContext) {
   console.log("Extension is being activated.");
 
-  localize = nls.config()();
-
   context.subscriptions.push(
-    vscode.commands.registerCommand(
-      "extension.changeDefaultTerminal",
-      changeDefaultTerminalCommand
-    )
+    vscode.commands.registerCommand("whichTerminal.setDefault", setDefault),
+    vscode.commands.registerCommand("whichTerminal.openTerminal", openTerminal)
   );
 
-  context.subscriptions.push(
-    vscode.commands.registerCommand("extension.openTerminal", openTerminal)
+  const config = me.getConfiguration();
+
+  if (config.showDefaultOnStatusBar) {
+    me.defaultTerminalButton = createDefaultTerminalStatusBarItem(
+      config.statusBarItemAlignment
+    );
+  }
+}
+
+function createDefaultTerminalStatusBarItem(
+  alignment: Alignment
+): vscode.StatusBarItem {
+  const result = vscode.window.createStatusBarItem(
+    alignment === "left"
+      ? vscode.StatusBarAlignment.Left
+      : vscode.StatusBarAlignment.Right
   );
 
-  const statusBarItem = vscode.window.createStatusBarItem(
-    vscode.StatusBarAlignment.Left
-  );
+  result.command = "whichTerminal.setDefault";
+  result.text = "$(terminal) Default Terminal: ?";
+  result.show();
 
-  statusBarItem.command = "extension.changeDefaultTerminal";
-  statusBarItem.text = "$(light-bulb) Default Terminal: ?";
-  statusBarItem.show();
+  return result;
 }
 
 export function deactivate() {}
 
-async function changeDefaultTerminalCommand(): Promise<void> {
+async function setDefault(): Promise<void> {
   const terminal = await quickPickTerminal(true);
   vscode.window.showInformationMessage(
     terminal ? terminal.title || terminal.shell : "Canceled"

@@ -16,43 +16,110 @@
   "contributes": {
     "configuration": {
       "title": "Which Terminal?",
-      "properties": {
-        "which-terminal.windowsTerminals": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "properties": {
-              "title": {
-                "type": [
-                  "string",
-                  "null"
-                ]
-              },
-              "shell": {
+      "definitions": {
+        "terminal": {
+          "$id": "#terminal",
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "shell": {
+              "type": "string"
+            },
+            "shellArgs": {
+              "type": [
+                "array",
+                "null"
+              ],
+              "items": {
                 "type": "string"
-              },
-              "shellArgs": {
-                "type": [
-                  "array",
-                  "null"
-                ],
-                "items": {
-                  "type": "string"
-                }
               }
             },
-            "required": [
-              "shell"
-            ]
+            "env": {
+              "type": "object"
+            }
           },
-          "default": [
+          "required": [
+            "shell"
+          ]
+        },
+        "terminalSet": {
+          "$id": "terminalSet",
+          "type": "array",
+          "items": {
+            "$ref": "#terminal"
+          }
+        }
+      },
+      "properties": {
+        "whichTerminal.showDefaultOnStatusBar": {
+          "type": "boolean",
+          "default": true
+        },
+        "whichTerminal.windowsTerminals": {
+          "allOf": [
             {
-              "title": "cmd",
-              "shell": "cmd.exe"
+              "$ref": "#terminalSet"
             },
             {
-              "title": "powershell",
-              "shell": "powershell.exe"
+              "default": [
+                {
+                  "title": "cmd",
+                  "shell": "cmd.exe",
+                  "env": {}
+                },
+                {
+                  "title": "powershell",
+                  "shell": "powershell.exe",
+                  "env": {}
+                }
+              ]
+            }
+          ]
+        },
+        "whichTerminal.linuxTerminals": {
+          "allOf": [
+            {
+              "$ref": "#terminalSet"
+            },
+            {
+              "default": [
+                {
+                  "title": "bash",
+                  "shell": "/bin/bash",
+                  "env": {}
+                },
+                {
+                  "title": "bash",
+                  "shell": "/bin/bash",
+                  "env": {}
+                }
+              ]
+            }
+          ]
+        },
+        "whichTerminal.osxTerminals": {
+          "allOf": [
+            {
+              "$ref": "#terminalSet"
+            },
+            {
+              "default": [
+                {
+                  "title": "bash",
+                  "shell": "/bin/bash",
+                  "env": {}
+                },
+                {
+                  "title": "bash",
+                  "shell": "/bin/bash",
+                  "env": {}
+                }
+              ]
             }
           ]
         }
@@ -60,11 +127,11 @@
     },
     "commands": [
       {
-        "command": "extension.changeDefaultTerminal",
+        "command": "whichTerminal.changeDefaultTerminal",
         "title": "Which Terminal: Change default terminal"
       },
       {
-        "command": "extension.openTerminal",
+        "command": "whichTerminal.openTerminal",
         "title": "Which Terminal: Open terminal"
       }
     ]
