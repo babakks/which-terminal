@@ -16,110 +16,174 @@
   "contributes": {
     "configuration": {
       "title": "Which Terminal?",
-      "definitions": {
-        "terminal": {
-          "$id": "#terminal",
-          "type": "object",
-          "properties": {
-            "title": {
-              "type": [
-                "string",
-                "null"
-              ]
-            },
-            "shell": {
-              "type": "string"
-            },
-            "shellArgs": {
-              "type": [
-                "array",
-                "null"
-              ],
-              "items": {
-                "type": "string"
-              }
-            },
-            "env": {
-              "type": "object"
-            }
-          },
-          "required": [
-            "shell"
-          ]
-        },
-        "terminalSet": {
-          "$id": "terminalSet",
+      "properties": {
+        "whichTerminal.windowsTerminals": {
           "type": "array",
           "items": {
-            "$ref": "#terminal"
-          }
-        }
-      },
-      "properties": {
-        "whichTerminal.showDefaultOnStatusBar": {
-          "type": "boolean",
-          "default": true
-        },
-        "whichTerminal.windowsTerminals": {
-          "allOf": [
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the terminal."
+              },
+              "shell": {
+                "description": "Path to the shell to be executed within the integrated terminal.",
+                "type": "string"
+              },
+              "shellArgs": {
+                "description": "Ordered array of arguments to pass to the shell.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "cwd": {
+                "description": "Working directory of the shell. Leave empty for the workspace root.",
+                "type": "string"
+              },
+              "env": {
+                "description": "Environment variables data as `string` key/value pairs.",
+                "type": "object"
+              },
+              "init": {
+                "description": "Array of the commands to be sent to the shell at the beginning.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "shell"
+            ],
+            "additionalProperties": false
+          },
+          "scope": "window",
+          "markdownDescription": "Array of terminals on Windows platform. Default is [`cmd`, `powershell`].",
+          "default": [
             {
-              "$ref": "#terminalSet"
+              "title": "cmd",
+              "shell": "cmd.exe",
+              "shellArgs": [],
+              "cwd": "",
+              "env": {},
+              "init": []
             },
             {
-              "default": [
-                {
-                  "title": "cmd",
-                  "shell": "cmd.exe",
-                  "env": {}
-                },
-                {
-                  "title": "powershell",
-                  "shell": "powershell.exe",
-                  "env": {}
-                }
-              ]
+              "title": "powershell",
+              "shell": "powershell.exe",
+              "shellArgs": [],
+              "cwd": "",
+              "env": {},
+              "init": []
             }
           ]
         },
         "whichTerminal.linuxTerminals": {
-          "allOf": [
-            {
-              "$ref": "#terminalSet"
-            },
-            {
-              "default": [
-                {
-                  "title": "bash",
-                  "shell": "/bin/bash",
-                  "env": {}
-                },
-                {
-                  "title": "bash",
-                  "shell": "/bin/bash",
-                  "env": {}
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the terminal."
+              },
+              "shell": {
+                "description": "Path to the shell to be executed within the integrated terminal.",
+                "type": "string"
+              },
+              "shellArgs": {
+                "description": "Ordered array of arguments to pass to the shell.",
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
-              ]
+              },
+              "cwd": {
+                "description": "Working directory of the shell. Leave empty for the workspace root.",
+                "type": "string"
+              },
+              "env": {
+                "description": "Environment variables data as `string` key/value pairs.",
+                "type": "object"
+              },
+              "init": {
+                "description": "Array of the commands to be sent to the shell at the beginning.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "shell"
+            ],
+            "additionalProperties": false
+          },
+          "scope": "window",
+          "markdownDescription": "Array of terminals on Linux platform. Default is `bash`.",
+          "default": [
+            {
+              "title": "bash",
+              "shell": "/bin/bash",
+              "shellArgs": [],
+              "cwd": "",
+              "env": {},
+              "init": []
             }
           ]
         },
         "whichTerminal.osxTerminals": {
-          "allOf": [
-            {
-              "$ref": "#terminalSet"
-            },
-            {
-              "default": [
-                {
-                  "title": "bash",
-                  "shell": "/bin/bash",
-                  "env": {}
-                },
-                {
-                  "title": "bash",
-                  "shell": "/bin/bash",
-                  "env": {}
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "description": "Title of the terminal."
+              },
+              "shell": {
+                "description": "Path to the shell to be executed within the integrated terminal.",
+                "type": "string"
+              },
+              "shellArgs": {
+                "description": "Ordered array of arguments to pass to the shell.",
+                "type": "array",
+                "items": {
+                  "type": "string"
                 }
-              ]
+              },
+              "cwd": {
+                "description": "Working directory of the shell. Leave empty for the workspace root.",
+                "type": "string"
+              },
+              "env": {
+                "description": "Environment variables data as `string` key/value pairs.",
+                "type": "object"
+              },
+              "init": {
+                "description": "Array of the commands to be sent to the shell at the beginning.",
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "required": [
+              "shell"
+            ],
+            "additionalProperties": false
+          },
+          "scope": "window",
+          "markdownDescription": "Array of terminals on OSX platform. Default is `bash`.",
+          "default": [
+            {
+              "title": "bash",
+              "shell": "/bin/bash",
+              "shellArgs": [],
+              "cwd": "",
+              "env": {},
+              "init": []
             }
           ]
         }
@@ -127,12 +191,12 @@
     },
     "commands": [
       {
-        "command": "whichTerminal.changeDefaultTerminal",
-        "title": "Which Terminal: Change default terminal"
+        "command": "whichTerminal.setDefault",
+        "title": "Which Terminal: Set default terminal"
       },
       {
         "command": "whichTerminal.openTerminal",
-        "title": "Which Terminal: Open terminal"
+        "title": "Which Terminal: Open new terminal"
       }
     ]
   },

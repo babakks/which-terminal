@@ -1,12 +1,12 @@
 import * as vscode from "vscode";
 import * as nls from "vscode-nls";
 
-import { Terminal, isTerminal } from "./model/terminal";
-import { DefaultTerminal } from "./defaults/defaultTerminal";
+import { Terminal } from "./model/terminal";
 import { DefaultContext } from "./defaults/defaultContext";
-import { Alignment } from "./model/configuration";
+import { Platform } from "./model/context";
 
 const me = new DefaultContext(); // Empty context.
+const localize = nls.config()();
 
 export function activate(context: vscode.ExtensionContext) {
   console.log("Extension is being activated.");
@@ -15,30 +15,6 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand("whichTerminal.setDefault", setDefault),
     vscode.commands.registerCommand("whichTerminal.openTerminal", openTerminal)
   );
-
-  const config = me.getConfiguration();
-
-  if (config.showDefaultOnStatusBar) {
-    me.defaultTerminalButton = createDefaultTerminalStatusBarItem(
-      config.statusBarItemAlignment
-    );
-  }
-}
-
-function createDefaultTerminalStatusBarItem(
-  alignment: Alignment
-): vscode.StatusBarItem {
-  const result = vscode.window.createStatusBarItem(
-    alignment === "left"
-      ? vscode.StatusBarAlignment.Left
-      : vscode.StatusBarAlignment.Right
-  );
-
-  result.command = "whichTerminal.setDefault";
-  result.text = "$(terminal) Default Terminal: ?";
-  result.show();
-
-  return result;
 }
 
 export function deactivate() {}
@@ -52,9 +28,11 @@ async function setDefault(): Promise<void> {
 
 async function openTerminal(): Promise<void> {
   const terminal = await quickPickTerminal(false);
-  vscode.window.showInformationMessage(
-    terminal ? terminal.title || terminal.shell : "Canceled"
-  );
+  if (!terminal) {
+    return;
+  }
+
+  createTerminal(terminal);
 }
 
 async function quickPickTerminal(
@@ -82,11 +60,26 @@ async function quickPickTerminal(
     : terminals.find(x => (x.title ? x.title === selection : !!x.shell));
 }
 
-function getOSTerminals(): Terminal[] | undefined {
-  const config = vscode.workspace.getConfiguration("which-terminal");
-  const terminals = config.windowsTerminals; // Just windows, for now.
+function getOSTerminals(): Terminal[] {
+  const config = me.getConfiguration();
 
-  return !Array.isArray(terminals)
-    ? undefined
-    : terminals.filter(x => isTerminal(x)).map(x => DefaultTerminal.from(x));
+  return me.platform === Platform.Windows
+    ? config.windowsTerminals
+    : me.platform === Platform.Osx
+    ? config.osxTerminals
+    : config.linuxTerminals;
+}
+
+function createTerminal(terminal: Terminal): vscode.Terminal {
+  const options: vscode.TerminalOptions = {
+    env: terminal.env,
+    name: terminal.title,
+    shellPath: terminal.shell,
+    shellArgs: terminal.shellArgs,
+    cwd: terminal.cwd
+  };
+
+  const vscodeTerminal = vscode.window.createTerminal(options);
+  vscodeTerminal.show();
+  return vscodeTerminal;
 }
