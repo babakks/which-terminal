@@ -1,6 +1,4 @@
 import { Configuration, isConfiguration } from "../model/configuration";
-import { Terminal } from "../model/terminal";
-import { DefaultTerminal } from "./defaultTerminal";
 import { TerminalArray } from "../model/terminalArray";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 

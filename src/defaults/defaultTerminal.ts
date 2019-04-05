@@ -2,6 +2,7 @@ import { Terminal, isTerminal, EnvironmentData } from "../model/terminal";
 
 export class DefaultTerminal implements Terminal {
   constructor(
+    public id: string,
     public shell: string,
     public shellArgs?: string[],
     public cwd?: string,
@@ -16,6 +17,7 @@ export class DefaultTerminal implements Terminal {
     }
 
     return new DefaultTerminal(
+      object.id,
       object.shell,
       object.shellArgs,
       object.cwd,

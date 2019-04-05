@@ -1,4 +1,5 @@
 export interface Terminal {
+  id: string;
   title?: string;
   cwd?: string;
   shell: string;
@@ -28,6 +29,8 @@ export function isTerminal(object: unknown): object is Terminal {
   return (
     object instanceof Object &&
     object !== null &&
+    typeof potentialTerminal.id === "string" &&
+    potentialTerminal.id !== "" &&
     typeof potentialTerminal.shell === "string" &&
     (potentialTerminal.title === undefined ||
       typeof potentialTerminal.title === "string") &&

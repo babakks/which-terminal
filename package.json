@@ -32,31 +32,35 @@
           "items": {
             "type": "object",
             "properties": {
+              "id": {
+                "type": "string",
+                "markdownDescription": "Unique identifier of the terminal."
+              },
               "title": {
                 "type": "string",
-                "description": "Title of the terminal."
+                "markdownDescription": "Title of the terminal."
               },
               "shell": {
-                "description": "Path to the shell to be executed within the integrated terminal.",
+                "markdownDescription": "Path to the shell to be executed within the integrated terminal.",
                 "type": "string"
               },
               "shellArgs": {
-                "description": "Ordered array of arguments to pass to the shell.",
+                "markdownDescription": "Ordered array of arguments to pass to the shell.",
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
               "cwd": {
-                "description": "Working directory of the shell. Leave empty for the workspace root.",
+                "markdownDescription": "Working directory of the shell. Leave empty for the workspace root.",
                 "type": "string"
               },
               "env": {
-                "description": "Environment variables data as `string` key/value pairs.",
+                "markdownDescription": "Environment variables data as `string` key/value pairs.",
                 "type": "object"
               },
               "init": {
-                "description": "Array of the commands to be sent to the shell at the beginning.",
+                "markdownDescription": "Array of the commands to be sent to the shell at the beginning.",
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -64,6 +68,7 @@
               }
             },
             "required": [
+              "id",
               "shell"
             ],
             "additionalProperties": false
@@ -72,7 +77,8 @@
           "markdownDescription": "Array of terminals on Windows platform. Default is [`cmd`, `powershell`].",
           "default": [
             {
-              "title": "cmd",
+              "id": "win-cmd",
+              "title": "Command Prompt (cmd.exe)",
               "shell": "cmd.exe",
               "shellArgs": [],
               "cwd": "",
@@ -80,7 +86,8 @@
               "init": []
             },
             {
-              "title": "powershell",
+              "id": "win-ps",
+              "title": "PowerShell (powershell.exe)",
               "shell": "powershell.exe",
               "shellArgs": [],
               "cwd": "",
@@ -94,31 +101,35 @@
           "items": {
             "type": "object",
             "properties": {
+              "id": {
+                "type": "string",
+                "markdownDescription": "Unique identifier of the terminal."
+              },
               "title": {
                 "type": "string",
-                "description": "Title of the terminal."
+                "markdownDescription": "Title of the terminal."
               },
               "shell": {
-                "description": "Path to the shell to be executed within the integrated terminal.",
+                "markdownDescription": "Path to the shell to be executed within the integrated terminal.",
                 "type": "string"
               },
               "shellArgs": {
-                "description": "Ordered array of arguments to pass to the shell.",
+                "markdownDescription": "Ordered array of arguments to pass to the shell.",
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
               "cwd": {
-                "description": "Working directory of the shell. Leave empty for the workspace root.",
+                "markdownDescription": "Working directory of the shell. Leave empty for the workspace root.",
                 "type": "string"
               },
               "env": {
-                "description": "Environment variables data as `string` key/value pairs.",
+                "markdownDescription": "Environment variables data as `string` key/value pairs.",
                 "type": "object"
               },
               "init": {
-                "description": "Array of the commands to be sent to the shell at the beginning.",
+                "markdownDescription": "Array of the commands to be sent to the shell at the beginning.",
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -126,6 +137,7 @@
               }
             },
             "required": [
+              "id",
               "shell"
             ],
             "additionalProperties": false
@@ -134,6 +146,7 @@
           "markdownDescription": "Array of terminals on Linux platform. Default is `bash`.",
           "default": [
             {
+              "id": "linux-bash",
               "title": "bash",
               "shell": "/bin/bash",
               "shellArgs": [],
@@ -148,31 +161,35 @@
           "items": {
             "type": "object",
             "properties": {
+              "id": {
+                "type": "string",
+                "markdownDescription": "Unique identifier of the terminal."
+              },
               "title": {
                 "type": "string",
-                "description": "Title of the terminal."
+                "markdownDescription": "Title of the terminal."
               },
               "shell": {
-                "description": "Path to the shell to be executed within the integrated terminal.",
+                "markdownDescription": "Path to the shell to be executed within the integrated terminal.",
                 "type": "string"
               },
               "shellArgs": {
-                "description": "Ordered array of arguments to pass to the shell.",
+                "markdownDescription": "Ordered array of arguments to pass to the shell.",
                 "type": "array",
                 "items": {
                   "type": "string"
                 }
               },
               "cwd": {
-                "description": "Working directory of the shell. Leave empty for the workspace root.",
+                "markdownDescription": "Working directory of the shell. Leave empty for the workspace root.",
                 "type": "string"
               },
               "env": {
-                "description": "Environment variables data as `string` key/value pairs.",
+                "markdownDescription": "Environment variables data as `string` key/value pairs.",
                 "type": "object"
               },
               "init": {
-                "description": "Array of the commands to be sent to the shell at the beginning.",
+                "markdownDescription": "Array of the commands to be sent to the shell at the beginning.",
                 "type": "array",
                 "items": {
                   "type": "string"
@@ -180,6 +197,7 @@
               }
             },
             "required": [
+              "id",
               "shell"
             ],
             "additionalProperties": false
@@ -188,6 +206,7 @@
           "markdownDescription": "Array of terminals on OSX platform. Default is `bash`.",
           "default": [
             {
+              "id": "osx-bash",
               "title": "bash",
               "shell": "/bin/bash",
               "shellArgs": [],
@@ -208,10 +227,14 @@
     "test": "npm run compile && node ./node_modules/vscode/bin/test"
   },
   "devDependencies": {
+    "@types/chai": "^4.1.7",
     "@types/mocha": "^2.2.42",
     "@types/node": "^10.12.21",
+    "@types/sinon": "^7.0.11",
     "chai": "^4.2.0",
     "mocha": "^6.0.2",
+    "sinon": "^7.3.1",
+    "ts-node": "^8.0.3",
     "tslint": "^5.12.1",
     "typescript": "^3.3.1",
     "vscode": "^1.1.28"
