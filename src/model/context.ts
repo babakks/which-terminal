@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 
 export interface Context {
   platform: Platform;
-  defaultTerminalButton?: vscode.StatusBarItem;
+  vscodeContext: vscode.ExtensionContext;
 
   getConfiguration(): Configuration;
 }

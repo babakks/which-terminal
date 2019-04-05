@@ -6,7 +6,7 @@ import { DefaultConfiguration } from "./defaultConfiguration";
 export class DefaultContext implements Context {
   platform: Platform;
 
-  constructor() {
+  constructor(public vscodeContext: vscode.ExtensionContext) {
     this.platform =
       process.platform === "win32"
         ? Platform.Windows

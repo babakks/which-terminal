@@ -3,13 +3,16 @@ import * as nls from "vscode-nls";
 
 import { Terminal } from "./model/terminal";
 import { DefaultContext } from "./defaults/defaultContext";
-import { Platform } from "./model/context";
+import { Platform, Context } from "./model/context";
+import { TerminalArray } from "./model/terminalArray";
 
-const me = new DefaultContext(); // Empty context.
+let me: Context;
 const localize = nls.config()();
 
 export function activate(context: vscode.ExtensionContext) {
   console.log("Extension is being activated.");
+
+  me = new DefaultContext(context);
 
   context.subscriptions.push(
     vscode.commands.registerCommand("whichTerminal.setDefault", setDefault),
@@ -21,9 +24,8 @@ export function deactivate() {}
 
 async function setDefault(): Promise<void> {
   const terminal = await quickPickTerminal(true);
-  vscode.window.showInformationMessage(
-    terminal ? terminal.title || terminal.shell : "Canceled"
-  );
+
+  throw new Error("Not implemented.");
 }
 
 async function openTerminal(): Promise<void> {
@@ -38,7 +40,7 @@ async function openTerminal(): Promise<void> {
 async function quickPickTerminal(
   selectDefault: boolean = false
 ): Promise<Terminal | undefined> {
-  const terminals = getOSTerminals();
+  const terminals = getPlatformTerminals();
   if (!terminals) {
     return undefined;
   }
@@ -60,7 +62,7 @@ async function quickPickTerminal(
     : terminals.find(x => (x.title ? x.title === selection : !!x.shell));
 }
 
-function getOSTerminals(): Terminal[] {
+function getPlatformTerminals(): TerminalArray {
   const config = me.getConfiguration();
 
   return me.platform === Platform.Windows
@@ -70,7 +72,10 @@ function getOSTerminals(): Terminal[] {
     : config.linuxTerminals;
 }
 
-function createTerminal(terminal: Terminal): vscode.Terminal {
+function createTerminal(
+  terminal: Terminal,
+  show: boolean = true
+): vscode.Terminal {
   const options: vscode.TerminalOptions = {
     env: terminal.env,
     name: terminal.title,
@@ -79,7 +84,15 @@ function createTerminal(terminal: Terminal): vscode.Terminal {
     cwd: terminal.cwd
   };
 
-  const vscodeTerminal = vscode.window.createTerminal(options);
-  vscodeTerminal.show();
-  return vscodeTerminal;
+  const result = vscode.window.createTerminal(options);
+
+  if (terminal.init) {
+    result.sendText(terminal.init.join("\r\n"));
+  }
+
+  if (show) {
+    result.show();
+  }
+
+  return result;
 }

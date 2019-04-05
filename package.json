@@ -14,6 +14,16 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "whichTerminal.setDefault",
+        "title": "Which Terminal: Set default terminal"
+      },
+      {
+        "command": "whichTerminal.openTerminal",
+        "title": "Which Terminal: Open new terminal"
+      }
+    ],
     "configuration": {
       "title": "Which Terminal?",
       "properties": {
@@ -188,17 +198,7 @@
           ]
         }
       }
-    },
-    "commands": [
-      {
-        "command": "whichTerminal.setDefault",
-        "title": "Which Terminal: Set default terminal"
-      },
-      {
-        "command": "whichTerminal.openTerminal",
-        "title": "Which Terminal: Open new terminal"
-      }
-    ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
