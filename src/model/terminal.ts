@@ -18,9 +18,7 @@ export function isEnvironmentData(object: unknown): object is EnvironmentData {
   return (
     object instanceof Object &&
     object !== null &&
-    Object.keys(object).every(
-      x => (object as any)[x] === null || typeof (object as any)[x] === "string"
-    )
+    Object.keys(object).every(x => typeof (object as any)[x] === "string")
   );
 }
 

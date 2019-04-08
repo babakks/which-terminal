@@ -1,7 +1,7 @@
 // tslint:disable: no-unused-expression
 
 import { expect } from "chai";
-import { Terminal, isTerminal } from "../../model/terminal";
+import { Terminal, isTerminal, isEnvironmentData } from "../../model/terminal";
 
 describe("isTerminal()", () => {
   describe("should fail on incompatible argument", () => {
@@ -60,5 +60,43 @@ describe("isTerminal()", () => {
 
       expect(isTerminal(argument)).to.be.true;
     });
+  });
+});
+
+describe("isEnvironmentData()", () => {
+  describe("should fail on incompatible argument", () => {
+    it("`undefined`/`null` argument", () => {
+      expect(isEnvironmentData(undefined)).to.be.false;
+      expect(isEnvironmentData(null)).to.be.false;
+    });
+
+    it("primitive argument", () => {
+      expect(isEnvironmentData(true)).to.be.false;
+      expect(isEnvironmentData(false)).to.be.false;
+      expect(isEnvironmentData("some-string")).to.be.false;
+      expect(isEnvironmentData(123456)).to.be.false;
+    });
+
+    it("incompatible (object) argument", () => {
+      const badArgument = {
+        someKey: 1234 // Not a string value.
+      };
+
+      expect(isEnvironmentData(badArgument)).to.be.false;
+    });
+
+    it("correct key type but `undefined`/`null` values", () => {
+      expect(isEnvironmentData({ someKey: undefined })).to.be.false;
+      expect(isEnvironmentData({ someKey: null })).to.be.false;
+    });
+  });
+
+  it("should work on correct type argument", () => {
+    const argument = {
+      mode: "dev",
+      path: "c:\\;c:\\my\\folder;"
+    };
+
+    expect(isEnvironmentData(argument)).to.be.true;
   });
 });
