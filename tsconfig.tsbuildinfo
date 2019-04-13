@@ -1,0 +1,1391 @@
+{
+  "program": {
+    "fileInfos": {
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": {
+        "version": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88",
+        "signature": "c8665e66018917580e71792b91022bcaf53fb946fab4aaf8dfb0738ed564db88"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": {
+        "version": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96",
+        "signature": "7994d44005046d1413ea31d046577cdda33b8b2470f30281fd9c8b3c99fe2d96"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": {
+        "version": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1",
+        "signature": "5f217838d25704474d9ef93774f04164889169ca31475fe423a9de6758f058d1"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": {
+        "version": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743",
+        "signature": "459097c7bdd88fc5731367e56591e4f465f2c9de81a35427a7bd473165c34743"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": {
+        "version": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843",
+        "signature": "2edd3ddf436ef8e12df876dcae4ecd6a8748577944c477bf4b20d5596e0c9843"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": {
+        "version": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d",
+        "signature": "384f66a3422d80014c51de2682159bb26f1e35854029880ccd5f6d1f00e6a36d"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": {
+        "version": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0",
+        "signature": "dd94d8ef48c562389eb58af8df3a3a34d11367f7c818192aa5f16470d469e3f0"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": {
+        "version": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3",
+        "signature": "828413486bdcaa342558e8e4570b1b287b776cb61b4b70b0214bd10c5d9a94c3"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": {
+        "version": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4",
+        "signature": "4d1f39313a169b8599b8817688f504b56ba8204c2ebafd03f66ff77ddb1899a4"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": {
+        "version": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe",
+        "signature": "7c07d934680d0e33275a44d22fb11a4ff31d46c8c26a8d056828a478753f1efe"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": {
+        "version": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe",
+        "signature": "5e72f949a89717db444e3bd9433468890068bb21a5638d8ab15a1359e05e54fe"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": {
+        "version": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976",
+        "signature": "f5b242136ae9bfb1cc99a5971cccc44e99947ae6b5ef6fd8aa54b5ade553b976"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": {
+        "version": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230",
+        "signature": "9ae2860252d6b5f16e2026d8a2c2069db7b2a3295e98b6031d01337b96437230"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": {
+        "version": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303",
+        "signature": "3e0a459888f32b42138d5a39f706ff2d55d500ab1031e0988b5568b0f67c2303"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": {
+        "version": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0",
+        "signature": "3f96f1e570aedbd97bf818c246727151e873125d0512e4ae904330286c721bc0"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": {
+        "version": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4",
+        "signature": "ff8ad203e83338289b0f5defc1a5b5c253fb7d251b464db497383f915a0df3f4"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": {
+        "version": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f",
+        "signature": "b8667586a618c5cf64523d4e500ae39e781428abfb28f3de441fc66b56144b6f"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": {
+        "version": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c",
+        "signature": "21df2e0059f14dcb4c3a0e125859f6b6ff01332ee24b0065a741d121250bc71c"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": {
+        "version": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6",
+        "signature": "c1759cb171c7619af0d2234f2f8fb2a871ee88e956e2ed91bb61778e41f272c6"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": {
+        "version": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46",
+        "signature": "28569d59e07d4378cb3d54979c4c60f9f06305c9bb6999ffe6cab758957adc46"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": {
+        "version": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4",
+        "signature": "42102aaeb1bfec213be1e9777466a6d551eeba8567fed18c0cdbca8c35e3c6e4"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": {
+        "version": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0",
+        "signature": "1b820b57379c726f94af50cd60053674af53ff9d079c1563cc70071e8b757dd0"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": {
+        "version": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62",
+        "signature": "efe049114bad1035b0aa9a4a0359f50ab776e3897c411521e51d3013079cbd62"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": {
+        "version": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8",
+        "signature": "e7780d04cd4120ee554c665829db2bbdd6b947cbaa3c150b7d9ea74df3beb2e8"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": {
+        "version": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8",
+        "signature": "f6e0c89daaf72eac38dfb1d5ef0972183f7f26a68da15bfe5bcb7cfccf0c7db8"
+      },
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": {
+        "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
+        "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": {
+        "version": "f6812ffe66c4c9c70d4f9cb9647b5b363dd0a4d28ffbb1e3e47b73758c448224",
+        "signature": "f6812ffe66c4c9c70d4f9cb9647b5b363dd0a4d28ffbb1e3e47b73758c448224"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": {
+        "version": "e4398bed57ad36b1cef258aac49704cecde8b403161a6e6ca043b0e9b3bcc3a9",
+        "signature": "e4398bed57ad36b1cef258aac49704cecde8b403161a6e6ca043b0e9b3bcc3a9"
+      },
+      "e:/projects/nodejs/which-terminal/src/model/terminal.ts": {
+        "version": "e80b85790e14b685b1da6c08c7204730886068af535c33a374ef766787ad493a",
+        "signature": "e3be30a4879dd0caef7b3edcf29b462d0a7080127030afa349d96c80bacaffb3"
+      },
+      "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts": {
+        "version": "2061dc7bbd4ef23d35fba5163e70d375bbf0651ed5ccd778cecdb0f6b08f2491",
+        "signature": "7f90436775d99a01ea40a699e426a21f91ff4d5c6f99af42c637b1c13406f2fa"
+      },
+      "e:/projects/nodejs/which-terminal/src/model/configuration.ts": {
+        "version": "96eb20a42bb8a9558dd1bccf6a3ae122a457595fb7aa2719c01d0b9dabd67446",
+        "signature": "1710a93c00a3b72982e2d282ca226b615b957f55610db7851bdfd5f8f76cfd86"
+      },
+      "e:/projects/nodejs/which-terminal/src/model/context.ts": {
+        "version": "38e24a87a77eebcaecf799d66857acf9df1f1c21ffe69e7f8efd372ad15448c5",
+        "signature": "6024e337e89c0dda6b6c2915131cf1e5bb24f1180d9ed15e3bea66a039b06c74"
+      },
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts": {
+        "version": "888d2ccd6b0484da68afa9d569fe924897bec23dca6ee9ec87a4ecc8666f5c36",
+        "signature": "c27d42ec44333d821f74508617c4476909a77707ceee4d5ea8dd7adf501f255d"
+      },
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminalarray.ts": {
+        "version": "ae6992f256dc2b1415596eb742093022a5a33a4ef927edea5b6c1bdc997859b1",
+        "signature": "cb0d2b19301d9d88703f31922482ab1cfc2076d396dd97bed7bb288ac201778f"
+      },
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultconfiguration.ts": {
+        "version": "0b734d1ae948ae99d3db30e902b196b0ce69cc1f12ac1e1596c483ae6d5ee799",
+        "signature": "7def1ff80fbb72462129b0694d10e811aad4377952014b5234529cc32714e944"
+      },
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultcontext.ts": {
+        "version": "e978b9f30ac841fe78385b4b0786a2d6f8e94e9db4fff1d496d4c94f3bda9b79",
+        "signature": "fc510133046b8436ff1e097ff7c0d492de6c113cfeea8111818b126e3682c338"
+      },
+      "e:/projects/nodejs/which-terminal/src/extension.ts": {
+        "version": "2b297dff244afae8ee31357df1ae0d9987ab6e3e962871a1895f2ff002523eb5",
+        "signature": "0748faed76e7c5374aa4199b08c9b2a972f2702a374f40b586e16d2686a1b344"
+      },
+      "e:/projects/nodejs/which-terminal/src/test/extension.test.ts": {
+        "version": "64065e3a9a75c9f19021d4b4c930a106b1dd4187927b43c8987609dea91079f8",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/lib/testrunner.d.ts": {
+        "version": "b175aa767126db4a758084c184a567da0f1b1dabd34625ca52fa44d8b534faf1",
+        "signature": "b175aa767126db4a758084c184a567da0f1b1dabd34625ca52fa44d8b534faf1"
+      },
+      "e:/projects/nodejs/which-terminal/src/test/index.ts": {
+        "version": "5195be39c424242814612f17fa0fbd18addce43389cbce7e6d71c3a058506de9",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts": {
+        "version": "c465afa89ac28f74167a2ee7c3c6eb8dd1245c2b3bdaa4704d58d35b932de4b7",
+        "signature": "c465afa89ac28f74167a2ee7c3c6eb8dd1245c2b3bdaa4704d58d35b932de4b7"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts": {
+        "version": "3fdf5e086de03fc17dd943691526d07bc4d951ec223e4685cac5f21d6533de3e",
+        "signature": "3fdf5e086de03fc17dd943691526d07bc4d951ec223e4685cac5f21d6533de3e"
+      },
+      "e:/projects/nodejs/which-terminal/src/test/defaults/defaultterminal.test.ts": {
+        "version": "6ec7030e58007e8a34c5fd0dc403aa07f72dd103f3f842427102307312ef2d35",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "e:/projects/nodejs/which-terminal/src/test/defaults/defaultterminalarray.test.ts": {
+        "version": "a5ba85631f61937ff0da241eec6684d795ebce51939566a81802c4b604d34c59",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "e:/projects/nodejs/which-terminal/src/test/model/terminal.test.ts": {
+        "version": "8c13dd923b9366f124c1ff6a2c303a786da21dda4df490caeeae85c4f4f817bd",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "e:/projects/nodejs/which-terminal/src/test/model/terminalarray.test.ts": {
+        "version": "a5593d907a1f1f94f56e0678ca4995d8c284cdc8440f35ce4d6b0b806adb1aad",
+        "signature": "f761c91419d0a89422a0004ef1a92929dd4d2d5e5c16758654d8b0467d1998c6"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/mocha/index.d.ts": {
+        "version": "d93bdd7313bdc64d926cd1429bdb9a979037240e89995fddbc6817075bbfe502",
+        "signature": "d93bdd7313bdc64d926cd1429bdb9a979037240e89995fddbc6817075bbfe502"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts": {
+        "version": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7",
+        "signature": "1bba2fc2e58c0340b92eeb9185be6e75e27d52f10a315aa65810a19b3277f1c7"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts": {
+        "version": "e37e4814461321ef67cbb2f4c9def6be18ff85670e6c665131b320e052905b75",
+        "signature": "e37e4814461321ef67cbb2f4c9def6be18ff85670e6c665131b320e052905b75"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts": {
+        "version": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a",
+        "signature": "138476cfdccbb9e2c7e06602bc216af843a56c4f3469a79106bc660ba94bd66a"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/buffer.d.ts": {
+        "version": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d",
+        "signature": "fe892fea1e75a442fffb4a604d7eeb451e858787a9f2f01c4e83bf12a3b5048d"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts": {
+        "version": "f1086bf9854d882321f28c3691987832c97e5bb360f9bbc5e0e5a150fa055f56",
+        "signature": "f1086bf9854d882321f28c3691987832c97e5bb360f9bbc5e0e5a150fa055f56"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/cluster.d.ts": {
+        "version": "d2704553f735d9b9cf31a26cbf4dd085e89b0ec3eec33d684b2517555370b665",
+        "signature": "d2704553f735d9b9cf31a26cbf4dd085e89b0ec3eec33d684b2517555370b665"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/console.d.ts": {
+        "version": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d",
+        "signature": "525c8fc510d9632d2a0a9de2d41c3ac1cdd79ff44d3b45c6d81cacabb683528d"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/constants.d.ts": {
+        "version": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598",
+        "signature": "b952021e804dcd9cb5e5552e1ec8bf9f479b61e20da5641e2a542fe77db9a598"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts": {
+        "version": "6b956acd0fa4df8f2723012d18498954438874cc63a0bd639dc470135a782101",
+        "signature": "6b956acd0fa4df8f2723012d18498954438874cc63a0bd639dc470135a782101"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dgram.d.ts": {
+        "version": "525f8306266375b46334fcfa9d7b62fdcfed5171b2a76c98b278b230419437c6",
+        "signature": "525f8306266375b46334fcfa9d7b62fdcfed5171b2a76c98b278b230419437c6"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts": {
+        "version": "92bd533d635f967b198fde9bc789996370f0db3322306646d961f64e67ed5b7a",
+        "signature": "92bd533d635f967b198fde9bc789996370f0db3322306646d961f64e67ed5b7a"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/domain.d.ts": {
+        "version": "ae3487bdb9b50c1d8bbeb6b55c8b2b9aa79bbc46d7afbc3483169ad8750c4304",
+        "signature": "ae3487bdb9b50c1d8bbeb6b55c8b2b9aa79bbc46d7afbc3483169ad8750c4304"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts": {
+        "version": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb",
+        "signature": "4a419878f025046ff6748d073123b0451849f83b7dbca907037a53e3eaa9bbbb"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts": {
+        "version": "c3c4f0875544378188c840f167a35aa511365b047286ec2c4e985ed49c78d19c",
+        "signature": "c3c4f0875544378188c840f167a35aa511365b047286ec2c4e985ed49c78d19c"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts": {
+        "version": "896c59370c35abd48415751b78ce927eda463a20f1a3921bf3dc4962504ec06e",
+        "signature": "896c59370c35abd48415751b78ce927eda463a20f1a3921bf3dc4962504ec06e"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http2.d.ts": {
+        "version": "e8ecb51f474cbd064956b3c75fdd513146140862ba72e6337b9bfae7efb12d0c",
+        "signature": "e8ecb51f474cbd064956b3c75fdd513146140862ba72e6337b9bfae7efb12d0c"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/https.d.ts": {
+        "version": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74",
+        "signature": "152af7c23ec219f632afa2d861abc65993f56cd39a4f3a4018515dbc05950a74"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/inspector.d.ts": {
+        "version": "0d668f73487c0d16fd6c1051c61b76d3b590cd986fadea91da08dff459dbec45",
+        "signature": "0d668f73487c0d16fd6c1051c61b76d3b590cd986fadea91da08dff459dbec45"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/module.d.ts": {
+        "version": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66",
+        "signature": "03394bf8deb8781b490ae9266a843fbdf00647947d79e25fcbf1d89a9e9c8a66"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts": {
+        "version": "56a15cc211894d79aa44cbb46c276bfd3f10458a61bff2dec99114db8a7e71e3",
+        "signature": "56a15cc211894d79aa44cbb46c276bfd3f10458a61bff2dec99114db8a7e71e3"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/os.d.ts": {
+        "version": "0ab49f803fa1d0f26682096e87ae239be05fee89ac538d30c59ab5a15bd38e6a",
+        "signature": "0ab49f803fa1d0f26682096e87ae239be05fee89ac538d30c59ab5a15bd38e6a"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts": {
+        "version": "61c84c3b0eb6e60196d15ae5e21793a1d4241c547f0bdd0529ffae838d1a073c",
+        "signature": "61c84c3b0eb6e60196d15ae5e21793a1d4241c547f0bdd0529ffae838d1a073c"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/perf_hooks.d.ts": {
+        "version": "981192e57b0e159c977f1d8e8b8576e9d6b4e013b902e9c0d4b178cb47e2dc86",
+        "signature": "981192e57b0e159c977f1d8e8b8576e9d6b4e013b902e9c0d4b178cb47e2dc86"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/process.d.ts": {
+        "version": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389",
+        "signature": "3a8848a9c307429b861402cc69bc472ffe0c05b86474fc158723169161e16389"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/punycode.d.ts": {
+        "version": "eeb0d1ad28e70773ac57ae9fe939c3bad6af2525a463c28f9ec31b5953de6735",
+        "signature": "eeb0d1ad28e70773ac57ae9fe939c3bad6af2525a463c28f9ec31b5953de6735"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts": {
+        "version": "8969e0b4d22ca77ad011c8fc4a25ec5d515bdfae4ecbd22608ed0d5c38829c1e",
+        "signature": "8969e0b4d22ca77ad011c8fc4a25ec5d515bdfae4ecbd22608ed0d5c38829c1e"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts": {
+        "version": "544728a999d35afc7b9e6d7420fb10046c16fcc5cb54fef21d2f5de78bf98830",
+        "signature": "544728a999d35afc7b9e6d7420fb10046c16fcc5cb54fef21d2f5de78bf98830"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/repl.d.ts": {
+        "version": "d0b0b533dc34ff7ffd019665fdc2b2aeae717bc1347e17a5bdc4d6572b5c109a",
+        "signature": "d0b0b533dc34ff7ffd019665fdc2b2aeae717bc1347e17a5bdc4d6572b5c109a"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts": {
+        "version": "6e04fe987766b22afe0b959da7145f904c164fe2c17586b218b8fcdad5792d51",
+        "signature": "6e04fe987766b22afe0b959da7145f904c164fe2c17586b218b8fcdad5792d51"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/string_decoder.d.ts": {
+        "version": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948",
+        "signature": "17e157df6125098a1a34eb4d201ee4ac03bbe97e471ab5627bb2c40fce555948"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/timers.d.ts": {
+        "version": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9",
+        "signature": "b40652bf8ce4a18133b31349086523b219724dca8df3448c1a0742528e7ad5b9"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts": {
+        "version": "68f639766f4b9d5c832bbca1203955969a8686137a4a197285dd64519cc26e58",
+        "signature": "68f639766f4b9d5c832bbca1203955969a8686137a4a197285dd64519cc26e58"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/trace_events.d.ts": {
+        "version": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662",
+        "signature": "978aecd2e6bc2ac094e9a35eda98ff8586713857b3655e7c98ca5ed8f7d50662"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tty.d.ts": {
+        "version": "3a59044813b24482ad7a7963bbee6b62507561969e273fbdc992ed9bc948fe13",
+        "signature": "3a59044813b24482ad7a7963bbee6b62507561969e273fbdc992ed9bc948fe13"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts": {
+        "version": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2",
+        "signature": "431151f55411c3f27cf539b987a7d1de453188ed58e54bc946183d280d3444a2"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts": {
+        "version": "62588e1d1de12cfb60f01badcb34db248df3ae2bc983d5f76376c4884783bdb2",
+        "signature": "62588e1d1de12cfb60f01badcb34db248df3ae2bc983d5f76376c4884783bdb2"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/v8.d.ts": {
+        "version": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded",
+        "signature": "e880a08fbb0d9ee2f733f9183f4d1bdb75bc9e0e64060a8a1fc30540791fcded"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts": {
+        "version": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9",
+        "signature": "f98df5ec124f441b465332271d0b083aeec815cd3c92d9249b9739e6318477a9"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/worker_threads.d.ts": {
+        "version": "e761c833140e3ab6f9deab37fe034154f3eb15547dce61395d9b0b1f130f3fa3",
+        "signature": "e761c833140e3ab6f9deab37fe034154f3eb15547dce61395d9b0b1f130f3fa3"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/zlib.d.ts": {
+        "version": "58257a0147702ab415ed18164557a0feb9c5d1351792ea293a876e6b7ed0c559",
+        "signature": "58257a0147702ab415ed18164557a0feb9c5d1351792ea293a876e6b7ed0c559"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts": {
+        "version": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce",
+        "signature": "6622f76993bdfeaacb947ba7c4cf26f2e5c5194194d02d792c3cba4174cd8fce"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts": {
+        "version": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c",
+        "signature": "4f54f0a9dd3b644c99ec32b32f8804d5978bc854799b228ae9c467bf3c84c64c"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts": {
+        "version": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45",
+        "signature": "ce6b191c382ee19f23678b8c364484627bcf424e8f408357a2f5530fb8d52a45"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts": {
+        "version": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c",
+        "signature": "765fc34423b93c2ab763670d8d11d99e5f47387c13c161d6f1640dd6d91b7d1c"
+      }
+    },
+    "options": {
+      "incremental": true,
+      "module": 1,
+      "target": 2,
+      "outDir": "E:/Projects/Nodejs/which-terminal/out",
+      "lib": [
+        "lib.es2015.d.ts"
+      ],
+      "sourceMap": true,
+      "rootDir": "E:/Projects/Nodejs/which-terminal/src",
+      "strict": true,
+      "configFilePath": "E:/Projects/Nodejs/which-terminal/tsconfig.json"
+    },
+    "referencedMap": {
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/terminal.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/configuration.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/context.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminalarray.ts": [
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultconfiguration.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultterminalarray.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultcontext.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/context.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+        "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultconfiguration.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/extension.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultcontext.ts",
+        "e:/projects/nodejs/which-terminal/src/model/context.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/test/extension.test.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/lib/testrunner.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/test/index.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/lib/testrunner.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/test/defaults/defaultterminal.test.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts",
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/test/defaults/defaultterminalarray.test.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts",
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultterminalarray.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/test/model/terminal.test.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/test/model/terminalarray.test.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/mocha/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/buffer.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/cluster.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/console.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/constants.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dgram.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/domain.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http2.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/https.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/inspector.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/module.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/os.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/perf_hooks.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/process.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/punycode.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/repl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/string_decoder.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/timers.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/trace_events.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tty.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/v8.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/worker_threads.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/zlib.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/buffer.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/cluster.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/console.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/constants.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dgram.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/domain.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http2.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/https.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/inspector.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/module.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/os.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/perf_hooks.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/process.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/punycode.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/repl.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/string_decoder.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/timers.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/trace_events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tty.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/v8.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/worker_threads.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/zlib.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts"
+      ]
+    },
+    "exportedModulesMap": {
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/configuration.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/model/context.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+        "e:/projects/nodejs/which-terminal/src/model/configuration.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminal.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminalarray.ts": [
+        "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts",
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultconfiguration.ts": [
+        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+        "e:/projects/nodejs/which-terminal/src/model/configuration.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultcontext.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+        "e:/projects/nodejs/which-terminal/src/model/context.ts",
+        "e:/projects/nodejs/which-terminal/src/model/configuration.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/src/extension.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/lib/testrunner.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/mocha/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/buffer.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/cluster.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/console.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/constants.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dgram.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/domain.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http2.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/https.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/inspector.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/module.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/os.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/perf_hooks.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/process.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/punycode.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/repl.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/string_decoder.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/timers.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/trace_events.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tty.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/v8.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/worker_threads.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/zlib.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/buffer.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/cluster.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/console.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/constants.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dgram.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/domain.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/http2.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/https.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/inspector.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/module.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/os.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/perf_hooks.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/process.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/punycode.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/repl.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/string_decoder.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/timers.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/trace_events.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/tty.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/v8.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/worker_threads.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/zlib.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts"
+      ]
+    },
+    "semanticDiagnosticsPerFile": [
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es5.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.core.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.collection.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.generator.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.iterable.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.promise.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.proxy.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.reflect.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2016.array.include.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.object.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.string.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.intl.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2017.typedarrays.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.asynciterable.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.intl.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.promise.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.intl.d.ts",
+      "c:/users/babak/appdata/roaming/npm/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts",
+      "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
+      "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
+      "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
+      "e:/projects/nodejs/which-terminal/src/model/context.ts",
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminal.ts",
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultterminalarray.ts",
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultconfiguration.ts",
+      "e:/projects/nodejs/which-terminal/src/defaults/defaultcontext.ts",
+      "e:/projects/nodejs/which-terminal/src/extension.ts",
+      "e:/projects/nodejs/which-terminal/src/test/extension.test.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/lib/testrunner.d.ts",
+      "e:/projects/nodejs/which-terminal/src/test/index.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/chai/index.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/sinon/ts3.1/index.d.ts",
+      "e:/projects/nodejs/which-terminal/src/test/defaults/defaultterminal.test.ts",
+      "e:/projects/nodejs/which-terminal/src/test/defaults/defaultterminalarray.test.ts",
+      "e:/projects/nodejs/which-terminal/src/test/model/terminal.test.ts",
+      "e:/projects/nodejs/which-terminal/src/test/model/terminalarray.test.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/mocha/index.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/globals.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/assert.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/async_hooks.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/buffer.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/child_process.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/cluster.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/console.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/constants.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/crypto.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dgram.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/dns.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/domain.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/events.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/fs.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/http2.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/https.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/inspector.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/module.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/net.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/os.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/perf_hooks.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/process.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/punycode.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/readline.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/repl.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/stream.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/string_decoder.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/timers.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tls.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/trace_events.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/tty.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/url.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/v8.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/vm.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/worker_threads.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/zlib.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts"
+    ]
+  },
+  "version": "3.4.3"
+}
