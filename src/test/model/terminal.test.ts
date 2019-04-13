@@ -1,7 +1,12 @@
 // tslint:disable: no-unused-expression
 
 import { expect } from "chai";
-import { Terminal, isTerminal, isEnvironmentData } from "../../model/terminal";
+import {
+  Terminal,
+  isTerminal,
+  isEnvironmentData,
+  isStringArray
+} from "../../model/terminal";
 
 describe("isTerminal()", () => {
   describe("should fail on incompatible argument", () => {
@@ -91,12 +96,55 @@ describe("isEnvironmentData()", () => {
     });
   });
 
-  it("should work on correct type argument", () => {
-    const argument = {
-      mode: "dev",
-      path: "c:\\;c:\\my\\folder;"
-    };
+  describe("should work on correct type argument", () => {
+    it("empty environment", () => {
+      expect(isEnvironmentData({})).to.be.true;
+    });
 
-    expect(isEnvironmentData(argument)).to.be.true;
+    it("non-empty environment", () => {
+      const argument = {
+        mode: "dev",
+        path: "c:\\;c:\\my\\folder;"
+      };
+
+      expect(isEnvironmentData(argument)).to.be.true;
+    });
+  });
+});
+
+describe("isStringArray()", () => {
+  describe("should fail on incompatible argument", () => {
+    it("`undefined`/`null` argument", () => {
+      expect(isStringArray(undefined)).to.be.false;
+      expect(isStringArray(null)).to.be.false;
+    });
+
+    it("primitive argument", () => {
+      expect(isStringArray(true)).to.be.false;
+      expect(isStringArray(false)).to.be.false;
+      expect(isStringArray("some-string")).to.be.false;
+      expect(isStringArray(123456)).to.be.false;
+    });
+
+    it("object argument", () => {
+      const badArgument = { someKey: 1234 };
+
+      expect(isStringArray(badArgument)).to.be.false;
+    });
+
+    it("Array but of `undefined`/`null` values", () => {
+      expect(isStringArray([undefined])).to.be.false;
+      expect(isStringArray([null])).to.be.false;
+    });
+  });
+
+  describe("should work on correct type argument", () => {
+    it("empty array", () => {
+      expect(isStringArray([])).to.be.true;
+    });
+
+    it("non-empty array", () => {
+      expect(isStringArray(["some string"])).to.be.true;
+    });
   });
 });

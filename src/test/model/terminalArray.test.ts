@@ -84,18 +84,35 @@ describe("isTerminalArray()", () => {
     });
   });
 
-  it("should call `isTerminal()` on argument elements, if any", () => {
-    const spy = sinon.spy(terminalModule, "isTerminal");
-    const argument = [
-      { shell: "shell.exe", id: "0000" }, // A `Terminal` item.
-      { someUnknownProperty: true } // A non-`Terminal` item.
-    ];
+  describe("should call `isTerminal()` on argument elements, if any", () => {
+    it("incompatible array", () => {
+      const spy = sinon.spy(terminalModule, "isTerminal");
+      const argument = [
+        { shell: "shell.exe", id: "0000" }, // A `Terminal` item.
+        { someUnknownProperty: true } // A non-`Terminal` item.
+      ];
 
-    expect(isTerminalArray(argument)).to.be.false;
-    expect(spy.calledTwice).to.be.true;
-    expect(spy.firstCall.returnValue).to.be.true;
-    expect(spy.secondCall.returnValue).to.be.false;
+      expect(isTerminalArray(argument)).to.be.false;
+      expect(spy.calledTwice).to.be.true;
+      expect(spy.firstCall.returnValue).to.be.true;
+      expect(spy.secondCall.returnValue).to.be.false;
 
-    sinon.restore();
+      sinon.restore();
+    });
+
+    it("compatible array", () => {
+      const spy = sinon.spy(terminalModule, "isTerminal");
+      const argument = [
+        { shell: "shell.exe", id: "0000" },
+        { shell: "shell2.exe", id: "0001" }
+      ];
+
+      expect(isTerminalArray(argument)).to.be.true;
+      expect(spy.calledTwice).to.be.true;
+      expect(spy.firstCall.returnValue).to.be.true;
+      expect(spy.secondCall.returnValue).to.be.true;
+
+      sinon.restore();
+    });
   });
 });
