@@ -2,7 +2,6 @@
 
 import { expect } from "chai";
 import {
-  Terminal,
   isTerminal,
   isEnvironmentData,
   isStringArray
