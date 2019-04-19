@@ -2,7 +2,7 @@ import * as vscode from "vscode";
 import * as nls from "vscode-nls";
 
 import { Terminal } from "./model/terminal";
-import { DefaultContext } from "./defaults/defaultContext";
+import { DefaultContext } from "./default/defaultContext";
 import { Platform, Context } from "./model/context";
 import { TerminalArray } from "./model/terminalArray";
 
