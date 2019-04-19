@@ -98,22 +98,6 @@ async function quickPickTerminal(
 }
 
 /**
- * Returns an array of shell templates available in the running platform.
- *
- * @returns {TerminalArray} A `TerminalArray` containing available shell
- *   templates.
- */
-function getPlatformTerminals(): TerminalArray {
-  const config = me.getConfiguration();
-
-  return me.platform === Platform.Windows
-    ? config.windowsTerminals
-    : me.platform === Platform.Osx
-    ? config.osxTerminals
-    : config.linuxTerminals;
-}
-
-/**
  * Creates a new integrated terminal given the underlying shell template.
  *
  * @param {Terminal} terminal The `Terminal` object describing the template.
