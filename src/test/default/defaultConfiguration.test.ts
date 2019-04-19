@@ -3,7 +3,7 @@
 import { expect } from "chai";
 import * as sinon from "sinon";
 import * as configurationModule from "../../model/configuration";
-import { DefaultConfiguration } from "../../defaults/defaultConfiguration";
+import { DefaultConfiguration } from "../../default/defaultConfiguration";
 
 describe("DefaultConfiguration", () => {
   afterEach(() => {

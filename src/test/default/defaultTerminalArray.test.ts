@@ -1,7 +1,7 @@
 // tslint:disable: no-unused-expression
 
 import { expect } from "chai";
-import { DefaultTerminalArray } from "../../defaults/defaultTerminalArray";
+import { DefaultTerminalArray } from "../../default/defaultTerminalArray";
 import * as terminalArrayModule from "../../model/terminalArray";
 import * as sinon from "sinon";
 
