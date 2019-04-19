@@ -9,6 +9,7 @@ import { Terminal } from "../model/terminal";
 
 import * as vscode from "vscode";
 import * as nls from "vscode-nls";
+import { State } from "./state/state";
 
 const localize = nls.config()();
 
@@ -22,10 +23,20 @@ export class DefaultContext implements Context {
   /**
    * Current running platform.
    *
+   * @private
    * @type {Platform}
    * @memberof DefaultContext
    */
   private platform: Platform;
+
+  /**
+   * Current extension state.
+   *
+   * @private
+   * @type {State}
+   * @memberof DefaultContext
+   */
+  private state: State;
 
   /**
    * Creates an instance of `DefaultContext`.
@@ -36,6 +47,7 @@ export class DefaultContext implements Context {
    */
   constructor(private vscodeContext: vscode.ExtensionContext) {
     this.platform = getPlatform();
+    this.state = new State(this.vscodeContext);
   }
 
   /**
@@ -63,11 +75,13 @@ export class DefaultContext implements Context {
     }
 
     this.createTerminal(terminal);
+    this.updateTerminalOrder(terminal);
   }
 
   /**
    * Returns current configuration.
    *
+   * @private
    * @returns {Configuration} Current configuration.
    * @memberof DefaultContext
    */
@@ -80,6 +94,7 @@ export class DefaultContext implements Context {
   /**
    * Returns an array of shell templates available in the running platform.
    *
+   * @private
    * @param {boolean} [ordered=true] Indicates whether frequently used templates
    *   should occur first in the returned `TerminalArray`.
    * @returns {TerminalArray} A `TerminalArray` containing available shell
@@ -102,6 +117,7 @@ export class DefaultContext implements Context {
   /**
    * Brings up a quick-pick list of available shell templates.
    *
+   * @private
    * @param {boolean} [selectDefault=false] Indicates whether the list is going
    *   to be populated to set the default shell template.
    * @returns {(Promise<Terminal | undefined>)} Returns a `Promise` that
@@ -142,6 +158,7 @@ export class DefaultContext implements Context {
   /**
    * Creates a new integrated terminal given the underlying shell template.
    *
+   * @private
    * @param {Terminal} terminal The `Terminal` object describing the template.
    * @param {boolean} [show=true] Indicates whether to show the terminal once
    *   it's created.
@@ -182,23 +199,30 @@ export class DefaultContext implements Context {
    * @memberof DefaultContext
    */
   private reorderTerminals(terminals: TerminalArray): TerminalArray {
-    const order = this.vscodeContext.workspaceState.get(
-      onPlatform(
-        this.platform,
-        "windowsTerminalsOrder",
-        "osxTerminalsOrder",
-        "linuxTerminalsOrder"
-      )
-    );
-
-    if (!isOrder(order) || !order.length) {
-      return terminals;
-    }
+    const order = this.state.order;
 
     return new DefaultTerminalArray(
       ...terminals.sort((a, b) => {
         return order.indexOf(a.id) - order.indexOf(b.id);
       })
     );
+  }
+
+  /**
+   * Moves the given template to the top of the frequently used terminals.
+   *
+   * @private
+   * @param {Terminal} terminal
+   * @memberof DefaultContext
+   */
+  private updateTerminalOrder(terminal: Terminal): void {
+    const order = this.state.order;
+    const ix = order.indexOf(terminal.id);
+    if (ix === -1) {
+      this.state.order = [terminal.id, ...order];
+    } else {
+      order.splice(ix, 1);
+      this.state.order = [terminal.id, ...order];
+    }
   }
 }
