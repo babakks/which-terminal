@@ -6,29 +6,49 @@ import { DefaultContext } from "./default/defaultContext";
 import { Platform, Context } from "./model/context";
 import { TerminalArray } from "./model/terminalArray";
 
+/**
+ * Extension running context.
+ *
+ * @type {Context}
+ */
 let me: Context;
+
 const localize = nls.config()();
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log("Extension is being activated.");
-
   me = new DefaultContext(context);
 
   context.subscriptions.push(
-    vscode.commands.registerCommand("whichTerminal.setDefault", setDefault),
-    vscode.commands.registerCommand("whichTerminal.openTerminal", openTerminal)
+    vscode.commands.registerCommand(
+      "whichTerminal.setDefault",
+      askAndSetDefault
+    ),
+    vscode.commands.registerCommand(
+      "whichTerminal.openTerminal",
+      askAndOpenTerminal
+    )
   );
 }
 
 export function deactivate() {}
 
-async function setDefault(): Promise<void> {
+/**
+ * Asks for a shell template to sets as default integrated shell.
+ *
+ * @returns {Promise<void>}
+ */
+async function askAndSetDefault(): Promise<void> {
   const terminal = await quickPickTerminal(true);
 
   throw new Error("Not implemented.");
 }
 
-async function openTerminal(): Promise<void> {
+/**
+ * Asks for a shell template to open as a new integrated shell.
+ *
+ * @returns {Promise<void>}
+ */
+async function askAndOpenTerminal(): Promise<void> {
   const terminal = await quickPickTerminal(false);
   if (!terminal) {
     return;
@@ -37,6 +57,14 @@ async function openTerminal(): Promise<void> {
   createTerminal(terminal);
 }
 
+/**
+ * Brings up a quick-pick list of available shell templates.
+ *
+ * @param {boolean} [selectDefault=false] Indicates whether the list is going to
+ *   be populated to set the default shell template.
+ * @returns {(Promise<Terminal | undefined>)} Returns a `Promise` that resolves
+ *   with the selected `Terminal`, if any; otherwise, resolves with `undefined`.
+ */
 async function quickPickTerminal(
   selectDefault: boolean = false
 ): Promise<Terminal | undefined> {
@@ -62,6 +90,12 @@ async function quickPickTerminal(
     : terminals.find(x => (x.title ? x.title === selection : !!x.shell));
 }
 
+/**
+ * Returns an array of shell templates available in the running platform.
+ *
+ * @returns {TerminalArray} A `TerminalArray` containing available shell
+ *   templates.
+ */
 function getPlatformTerminals(): TerminalArray {
   const config = me.getConfiguration();
 
@@ -72,6 +106,14 @@ function getPlatformTerminals(): TerminalArray {
     : config.linuxTerminals;
 }
 
+/**
+ * Creates a new integrated terminal given the underlying shell template.
+ *
+ * @param {Terminal} terminal The `Terminal` object describing the template.
+ * @param {boolean} [show=true] Indicates whether to show the terminal once
+ *   it's created.
+ * @returns {vscode.Terminal} The created `vscode.Terminal` instance.
+ */
 function createTerminal(
   terminal: Terminal,
   show: boolean = true
