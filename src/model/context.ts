@@ -2,7 +2,14 @@ import { Configuration } from "./configuration";
 import { TerminalArray } from "./terminalArray";
 import { Platform } from "./platform";
 import * as vscode from "vscode";
+import { Terminal } from "./terminal";
 
+/**
+ * Encapsulates extension behaviors and data.
+ *
+ * @export
+ * @interface Context
+ */
 export interface Context {
   /**
    * Current running platform.
@@ -13,19 +20,18 @@ export interface Context {
   platform: Platform;
 
   /**
-   * Returns current configuration.
+   * Asks for a shell template to sets as default integrated shell.
    *
-   * @returns {Configuration} Current configuration.
+   * @returns {Promise<void>}
    * @memberof Context
    */
-  getConfiguration(): Configuration;
+  askAndSetDefault(): Promise<void>;
 
   /**
-   * Returns an array of shell templates available in the running platform.
+   * Asks for a shell template to open as a new integrated shell.
    *
-   * @returns {TerminalArray} A `TerminalArray` containing available shell
-   *   templates.
+   * @returns {Promise<void>}
    * @memberof Context
    */
-  getTerminals(): TerminalArray;
+  askAndOpenTerminal(): Promise<void>;
 }
