@@ -2,7 +2,7 @@ import { Context } from "../model/context";
 import { Configuration } from "../model/configuration";
 import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
-import { Platform, getPlatform } from "./state/platform";
+import { Platform, getPlatform, onPlatform } from "./state/platform";
 import { isOrder } from "./state/order";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
@@ -89,12 +89,12 @@ export class DefaultContext implements Context {
   private getTerminals(ordered: boolean = true): TerminalArray {
     const config = this.getConfiguration();
 
-    const terminals =
-      this.platform === Platform.Windows
-        ? config.windowsTerminals
-        : this.platform === Platform.Osx
-        ? config.osxTerminals
-        : config.linuxTerminals;
+    const terminals = onPlatform(
+      this.platform,
+      config.windowsTerminals,
+      config.osxTerminals,
+      config.linuxTerminals
+    );
 
     return ordered ? this.reorderTerminals(terminals) : terminals;
   }
@@ -182,12 +182,14 @@ export class DefaultContext implements Context {
    * @memberof DefaultContext
    */
   private reorderTerminals(terminals: TerminalArray): TerminalArray {
-    const order =
-      this.platform === Platform.Windows
-        ? this.vscodeContext.workspaceState.get("windowsTerminalsOrder")
-        : this.platform === Platform.Osx
-        ? this.vscodeContext.workspaceState.get("osxTerminalsOrder")
-        : this.vscodeContext.workspaceState.get("linuxTerminalsOrder");
+    const order = this.vscodeContext.workspaceState.get(
+      onPlatform(
+        this.platform,
+        "windowsTerminalsOrder",
+        "osxTerminalsOrder",
+        "linuxTerminalsOrder"
+      )
+    );
 
     if (!isOrder(order) || !order.length) {
       return terminals;
