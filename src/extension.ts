@@ -1,12 +1,9 @@
-import * as vscode from "vscode";
-import * as nls from "vscode-nls";
-
 import { Terminal } from "./model/terminal";
 import { DefaultContext } from "./default/defaultContext";
-import { Platform, Context } from "./model/context";
-import { TerminalArray } from "./model/terminalArray";
-import { format } from "path";
-import { stringify } from "querystring";
+import { Context } from "./model/context";
+
+import * as vscode from "vscode";
+import * as nls from "vscode-nls";
 
 /**
  * Extension running context.
@@ -70,7 +67,7 @@ async function askAndOpenTerminal(): Promise<void> {
 async function quickPickTerminal(
   selectDefault: boolean = false
 ): Promise<Terminal | undefined> {
-  const terminals = getPlatformTerminals();
+  const terminals = me.getTerminals();
   if (!terminals) {
     return undefined;
   }

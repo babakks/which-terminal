@@ -105,14 +105,6 @@
         "version": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8",
         "signature": "63b66918290d794f73832a6d0325be5026236674fe8c0cb0b68d162000d7bbe8"
       },
-      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": {
-        "version": "f6812ffe66c4c9c70d4f9cb9647b5b363dd0a4d28ffbb1e3e47b73758c448224",
-        "signature": "f6812ffe66c4c9c70d4f9cb9647b5b363dd0a4d28ffbb1e3e47b73758c448224"
-      },
-      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": {
-        "version": "e4398bed57ad36b1cef258aac49704cecde8b403161a6e6ca043b0e9b3bcc3a9",
-        "signature": "e4398bed57ad36b1cef258aac49704cecde8b403161a6e6ca043b0e9b3bcc3a9"
-      },
       "e:/projects/nodejs/which-terminal/src/model/terminal.ts": {
         "version": "e80b85790e14b685b1da6c08c7204730886068af535c33a374ef766787ad493a",
         "signature": "e3be30a4879dd0caef7b3edcf29b462d0a7080127030afa349d96c80bacaffb3"
@@ -126,8 +118,12 @@
         "signature": "1710a93c00a3b72982e2d282ca226b615b957f55610db7851bdfd5f8f76cfd86"
       },
       "e:/projects/nodejs/which-terminal/src/model/platform.ts": {
-        "version": "6f49492f799c32372558c795372906ca63fda5adf08c8fc5fa9cf4aaf6931360",
+        "version": "55fd7402fec6aeb7db605df4b6b20a25818ebe21031f9b4658aa39152704ac38",
         "signature": "f383e22eb2051b25b55bd2266319cc60ec98ee7685316b0074feb48ab984fc06"
+      },
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": {
+        "version": "f6812ffe66c4c9c70d4f9cb9647b5b363dd0a4d28ffbb1e3e47b73758c448224",
+        "signature": "f6812ffe66c4c9c70d4f9cb9647b5b363dd0a4d28ffbb1e3e47b73758c448224"
       },
       "e:/projects/nodejs/which-terminal/src/model/context.ts": {
         "version": "bdb328fc413c4c860772f7f0697fb120c202dbcb9a411534c3c7cf574bdb1c32",
@@ -149,8 +145,12 @@
         "version": "947c1cee36c444bb25daa0cdb1cbdc71e736d6b27afb2e01523353988784c40d",
         "signature": "d80a75c7961abbd728e3c61573aeba2ec94ace0395e70779619fe5a07230cf5c"
       },
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": {
+        "version": "e4398bed57ad36b1cef258aac49704cecde8b403161a6e6ca043b0e9b3bcc3a9",
+        "signature": "e4398bed57ad36b1cef258aac49704cecde8b403161a6e6ca043b0e9b3bcc3a9"
+      },
       "e:/projects/nodejs/which-terminal/src/extension.ts": {
-        "version": "a7a00d4b07acc0418a7d65b2d3fa41c18a657dd19da7a819cc124f8b0d99427b",
+        "version": "83928458a38d15514b19fca50f9c97ef469ed91c733e103d9396cc357760dae0",
         "signature": "0748faed76e7c5374aa4199b08c9b2a972f2702a374f40b586e16d2686a1b344"
       },
       "e:/projects/nodejs/which-terminal/src/test/extension.test.ts": {
@@ -498,14 +498,6 @@
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": [
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": [
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "e:/projects/nodejs/which-terminal/src/model/terminal.ts": [
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
@@ -521,6 +513,10 @@
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "e:/projects/nodejs/which-terminal/src/model/platform.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": [
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -560,15 +556,16 @@
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "e:/projects/nodejs/which-terminal/src/extension.ts": [
-        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts",
         "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
         "e:/projects/nodejs/which-terminal/src/default/defaultcontext.ts",
         "e:/projects/nodejs/which-terminal/src/model/context.ts",
-        "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/path.d.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/querystring.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
@@ -1015,19 +1012,15 @@
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
         "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": [
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": [
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
-        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts": [
         "e:/projects/nodejs/which-terminal/src/model/terminal.ts"
       ],
       "e:/projects/nodejs/which-terminal/src/model/configuration.ts": [
         "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "e:/projects/nodejs/which-terminal/src/model/context.ts": [
         "e:/projects/nodejs/which-terminal/src/model/platform.ts",
@@ -1051,6 +1044,10 @@
         "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
         "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
         "e:/projects/nodejs/which-terminal/src/model/context.ts"
+      ],
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts": [
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/util.d.ts",
+        "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "e:/projects/nodejs/which-terminal/src/extension.ts": [
         "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts"
@@ -1363,15 +1360,18 @@
       "e:/projects/nodejs/which-terminal/node_modules/typescript/lib/lib.es2018.regexp.d.ts",
       "e:/projects/nodejs/which-terminal/node_modules/typescript/lib/lib.esnext.intl.d.ts",
       "e:/projects/nodejs/which-terminal/node_modules/typescript/lib/lib.esnext.bigint.d.ts",
-      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
-      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts",
       "e:/projects/nodejs/which-terminal/src/model/terminal.ts",
       "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
       "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
       "e:/projects/nodejs/which-terminal/src/model/platform.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
+      "e:/projects/nodejs/which-terminal/src/model/context.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultterminal.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultterminalarray.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultconfiguration.ts",
+      "e:/projects/nodejs/which-terminal/src/default/defaultcontext.ts",
+      "e:/projects/nodejs/which-terminal/node_modules/vscode-nls/lib/main.d.ts",
+      "e:/projects/nodejs/which-terminal/src/extension.ts",
       "e:/projects/nodejs/which-terminal/src/test/extension.test.ts",
       "e:/projects/nodejs/which-terminal/node_modules/vscode/lib/testrunner.d.ts",
       "e:/projects/nodejs/which-terminal/src/test/index.ts",
@@ -1427,79 +1427,7 @@
       "e:/projects/nodejs/which-terminal/node_modules/@types/node/base.d.ts",
       "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts",
       "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts",
-      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts",
-      "e:/projects/nodejs/which-terminal/src/model/context.ts",
-      "e:/projects/nodejs/which-terminal/src/default/defaultcontext.ts",
-      [
-        "e:/projects/nodejs/which-terminal/src/extension.ts",
-        [
-          {
-            "file": "e:/projects/nodejs/which-terminal/src/extension.ts",
-            "start": 188,
-            "length": 8,
-            "messageText": "Module '\"../../../../Projects/Nodejs/which-terminal/src/model/context\"' has no exported member 'Platform'.",
-            "category": 1,
-            "code": 2305
-          },
-          {
-            "file": "e:/projects/nodejs/which-terminal/src/extension.ts",
-            "start": 1925,
-            "length": 20,
-            "messageText": "Cannot find name 'getPlatformTerminals'.",
-            "category": 1,
-            "code": 2304
-          },
-          {
-            "file": "e:/projects/nodejs/which-terminal/src/extension.ts",
-            "start": 2642,
-            "length": 6,
-            "code": 2345,
-            "category": 1,
-            "messageText": {
-              "messageText": "Argument of type '{}[]' is not assignable to parameter of type 'QuickPickItem[] | Thenable<QuickPickItem[]>'.",
-              "category": 1,
-              "code": 2345,
-              "next": {
-                "messageText": "Type '{}[]' is not assignable to type 'QuickPickItem[]'.",
-                "category": 1,
-                "code": 2322,
-                "next": {
-                  "messageText": "Property 'label' is missing in type '{}' but required in type 'QuickPickItem'.",
-                  "category": 1,
-                  "code": 2741
-                }
-              }
-            },
-            "relatedInformation": [
-              {
-                "file": "e:/projects/nodejs/which-terminal/node_modules/vscode/vscode.d.ts",
-                "start": 48795,
-                "length": 5,
-                "messageText": "'label' is declared here.",
-                "category": 3,
-                "code": 2728
-              }
-            ]
-          },
-          {
-            "file": "e:/projects/nodejs/which-terminal/src/extension.ts",
-            "start": 2665,
-            "length": 50,
-            "code": 2322,
-            "category": 1,
-            "messageText": {
-              "messageText": "Type '{} | undefined' is not assignable to type 'Terminal | undefined'.",
-              "category": 1,
-              "code": 2322,
-              "next": {
-                "messageText": "Type '{}' is missing the following properties from type 'Terminal': id, shell",
-                "category": 1,
-                "code": 2739
-              }
-            }
-          }
-        ]
-      ]
+      "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts"
     ]
   },
   "version": "3.4.3"
