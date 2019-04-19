@@ -5,6 +5,8 @@ import { Terminal } from "./model/terminal";
 import { DefaultContext } from "./default/defaultContext";
 import { Platform, Context } from "./model/context";
 import { TerminalArray } from "./model/terminalArray";
+import { format } from "path";
+import { stringify } from "querystring";
 
 /**
  * Extension running context.
@@ -82,12 +84,17 @@ async function quickPickTerminal(
       : localize("quickPickSelectTerminalPlaceHolder", "Select terminal")
   };
 
-  const titles = terminals.map(x => x.title || x.shell);
+  const icon = "$(terminal)";
+  const prefix = icon + " ";
+  const makeTitle = (t: Terminal) => prefix + (t.title || t.shell);
+  const makeEntry = (t: Terminal): [string, Terminal] => [makeTitle(t), t];
+
+  const map = new Map(terminals.map(makeEntry));
+  const titles = Array.from(map.keys());
+
   const selection = await vscode.window.showQuickPick(titles, options);
 
-  return !selection
-    ? undefined
-    : terminals.find(x => (x.title ? x.title === selection : !!x.shell));
+  return selection ? map.get(selection) : undefined;
 }
 
 /**
