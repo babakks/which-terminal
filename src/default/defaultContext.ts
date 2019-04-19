@@ -2,7 +2,7 @@ import { Context } from "../model/context";
 import { Configuration } from "../model/configuration";
 import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
-import { Platform, getPlatform } from "../model/platform";
+import { Platform, getPlatform } from "./state/platform";
 import { isOrder } from "./state/order";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
@@ -25,7 +25,7 @@ export class DefaultContext implements Context {
    * @type {Platform}
    * @memberof DefaultContext
    */
-  platform: Platform;
+  private platform: Platform;
 
   /**
    * Creates an instance of `DefaultContext`.
