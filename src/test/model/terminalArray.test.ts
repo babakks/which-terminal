@@ -6,6 +6,10 @@ import * as terminalModule from "../../model/terminal";
 import * as sinon from "sinon";
 
 describe("isTerminalArray()", () => {
+  afterEach(() => {
+    sinon.restore();
+  });
+
   describe("should fail on incompatible argument", () => {
     it("`undefined`/`null` argument", () => {
       expect(isTerminalArray(undefined)).to.be.false;
@@ -93,9 +97,9 @@ describe("isTerminalArray()", () => {
       ];
 
       expect(isTerminalArray(argument)).to.be.false;
-      expect(spy.calledTwice).to.be.true;
-      expect(spy.firstCall.returnValue).to.be.true;
-      expect(spy.secondCall.returnValue).to.be.false;
+      expect(spy.callCount).to.be.gte(2);
+      expect(spy.returned(true)).to.be.true;
+      expect(spy.returned(false)).to.be.true;
 
       sinon.restore();
     });
@@ -108,9 +112,8 @@ describe("isTerminalArray()", () => {
       ];
 
       expect(isTerminalArray(argument)).to.be.true;
-      expect(spy.calledTwice).to.be.true;
-      expect(spy.firstCall.returnValue).to.be.true;
-      expect(spy.secondCall.returnValue).to.be.true;
+      expect(spy.callCount).to.be.gte(2);
+      expect(spy.returned(false)).to.be.false;
 
       sinon.restore();
     });

@@ -6,6 +6,10 @@ import * as terminalModule from "../../model/terminal";
 import * as sinon from "sinon";
 
 describe("DefaultTerminal", () => {
+  afterEach(() => {
+    sinon.restore();
+  });
+
   describe("from()", () => {
     describe("should check argument type compatibility with `isTerminal()`", () => {
       it("should call `isTerminal()` and throw on an incompatible argument", () => {

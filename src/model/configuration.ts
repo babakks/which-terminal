@@ -1,4 +1,3 @@
-import { Terminal } from "./terminal";
 import { TerminalArray, isTerminalArray } from "./terminalArray";
 
 export interface Configuration {

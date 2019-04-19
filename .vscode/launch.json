@@ -25,6 +25,16 @@
       ],
       "outFiles": ["${workspaceFolder}/out/test/**/*.js"],
       "preLaunchTask": "npm: watch"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Test (run all but `extension.test.ts`)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "test-all-but-extension"
+      ]
     }
   ]
 }
