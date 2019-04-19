@@ -130,7 +130,7 @@
         "signature": "f383e22eb2051b25b55bd2266319cc60ec98ee7685316b0074feb48ab984fc06"
       },
       "e:/projects/nodejs/which-terminal/src/model/context.ts": {
-        "version": "4be7639210059a8a7c416ae4c2590b000fd73daf24d9d709ffa6e6e09d69601b",
+        "version": "bdb328fc413c4c860772f7f0697fb120c202dbcb9a411534c3c7cf574bdb1c32",
         "signature": "609d036031748a4bcca94896da8d2e1b8637b05a6e979158d519d9e7faf3e5ab"
       },
       "e:/projects/nodejs/which-terminal/src/default/defaultterminal.ts": {
@@ -1369,7 +1369,6 @@
       "e:/projects/nodejs/which-terminal/src/model/terminalarray.ts",
       "e:/projects/nodejs/which-terminal/src/model/configuration.ts",
       "e:/projects/nodejs/which-terminal/src/model/platform.ts",
-      "e:/projects/nodejs/which-terminal/src/model/context.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultterminal.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultterminalarray.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultconfiguration.ts",
@@ -1429,6 +1428,7 @@
       "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/util.d.ts",
       "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/globals.d.ts",
       "e:/projects/nodejs/which-terminal/node_modules/@types/node/ts3.2/index.d.ts",
+      "e:/projects/nodejs/which-terminal/src/model/context.ts",
       "e:/projects/nodejs/which-terminal/src/default/defaultcontext.ts",
       [
         "e:/projects/nodejs/which-terminal/src/extension.ts",
