@@ -187,6 +187,8 @@ export class DefaultContext implements Context {
       result.show();
     }
 
+    this.updateTerminalOrder(terminal);
+
     return result;
   }
 
