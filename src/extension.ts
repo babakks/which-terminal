@@ -8,11 +8,13 @@ export function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     vscode.commands.registerCommand(
       "whichTerminal.setDefault",
-      me.askAndSetDefault
+      me.askAndSetDefault,
+      me
     ),
     vscode.commands.registerCommand(
       "whichTerminal.openTerminal",
-      me.askAndOpenTerminal
+      me.askAndOpenTerminal,
+      me
     )
   );
 }
