@@ -24,21 +24,21 @@
         "title": "Which Terminal: Set workspace default terminal"
       },
       {
-        "command": "whichTerminal.openTerminal",
+        "command": "whichTerminal.open",
         "title": "Which Terminal: Open new terminal"
       },
       {
-        "command": "whichTerminal.switchTerminal",
+        "command": "whichTerminal.switch",
         "title": "Which Terminal: Switch terminal"
       }
     ],
     "keybindings": [
       {
-        "command": "whichTerminal.openTerminal",
+        "command": "whichTerminal.open",
         "key": "Ctrl+Alt+Shift+`"
       },
       {
-        "command": "whichTerminal.switchTerminal",
+        "command": "whichTerminal.switch",
         "key": "Ctrl+Alt+`"
       }
     ],
