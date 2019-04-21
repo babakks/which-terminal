@@ -28,6 +28,20 @@
         "title": "Which Terminal: Switch terminal"
       }
     ],
+    "keybindings": [
+      {
+        "command": "whichTerminal.openTerminal",
+        "key": "Ctrl+Alt+Shift+`"
+      },
+      {
+        "command": "whichTerminal.openTerminal",
+        "key": "Ctrl+k Ctrl+Shift+`"
+      },
+      {
+        "command": "whichTerminal.switchTerminal",
+        "key": "Ctrl+k Ctrl+`"
+      }
+    ],
     "configuration": {
       "title": "Which Terminal?",
       "properties": {
