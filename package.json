@@ -22,6 +22,10 @@
       {
         "command": "whichTerminal.openTerminal",
         "title": "Which Terminal: Open new terminal"
+      },
+      {
+        "command": "whichTerminal.switchTerminals",
+        "title": "Which Terminal: Switch terminals"
       }
     ],
     "configuration": {

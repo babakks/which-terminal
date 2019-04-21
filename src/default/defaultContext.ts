@@ -39,6 +39,14 @@ export class DefaultContext implements Context {
   private state: State;
 
   /**
+   * Map of terminals opened by the extension.
+   *
+   * @private
+   * @memberof DefaultContext
+   */
+  private openedTerminals = new Map<vscode.Terminal, Terminal>();
+
+  /**
    * Creates an instance of `DefaultContext`.
    *
    * @param {vscode.ExtensionContext} vscodeContext VS Code original context
@@ -48,6 +56,10 @@ export class DefaultContext implements Context {
   constructor(private vscodeContext: vscode.ExtensionContext) {
     this.platform = getPlatform();
     this.state = new State(this.vscodeContext);
+
+    vscode.window.onDidCloseTerminal((e: vscode.Terminal) => {
+      this.openedTerminals.delete(e);
+    });
   }
 
   /**
@@ -76,6 +88,22 @@ export class DefaultContext implements Context {
 
     this.createTerminal(terminal);
     this.updateRecentTerminalsListOrder(terminal);
+  }
+
+  /**
+   * Lists open terminals and switches to the selected terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof DefaultContext
+   */
+  async switchTerminal(): Promise<void> {
+    const terminal = await this.quickPickOpenTerminals();
+
+    if (!terminal) {
+      return;
+    }
+
+    terminal.show();
   }
 
   /**
@@ -120,8 +148,8 @@ export class DefaultContext implements Context {
    * @private
    * @param {boolean} [selectDefault=false] Indicates whether the list is going
    *   to be populated to set the default shell template.
-   * @returns {(Promise<Terminal | undefined>)} Returns a `Promise` that
-   *   resolves with the selected `Terminal`, if any; otherwise, resolves with
+   * @returns {Promise<Terminal | undefined>} Returns a `Promise` that resolves
+   *   with the selected `Terminal`, if any; otherwise, resolves with
    *   `undefined`.
    * @memberof DefaultContext
    */
@@ -145,14 +173,11 @@ export class DefaultContext implements Context {
 
     const icon = "$(terminal)";
     const prefix = icon + " ";
-    // const makeTitle = (t: Terminal) => prefix + (t.title || t.shell);
-    // const makeEntry = (t: Terminal): [string, Terminal] => [makeTitle(t), t];
-    // const map = new Map(terminals.map(makeEntry));
-    // const titles = Array.from(map.keys());
-
+    const makeLabel = (t: Terminal) => prefix + (t.title || t.shell);
+    const makeDescription = (t: Terminal) => (t.title ? t.shell : "");
     const makeQuickPickItem = (t: Terminal): vscode.QuickPickItem => ({
-      label: prefix + (t.title || t.shell),
-      description: t.title ? t.shell : ""
+      label: makeLabel(t),
+      description: makeDescription(t)
     });
 
     const makeEntry = (t: Terminal): [vscode.QuickPickItem, Terminal] => [
@@ -160,6 +185,43 @@ export class DefaultContext implements Context {
       t
     ];
     const map = new Map(terminals.map(makeEntry));
+    const titles = Array.from(map.keys());
+
+    const selection = await vscode.window.showQuickPick(titles, options);
+    return selection ? map.get(selection) : undefined;
+  }
+
+  /**
+   * Brings up a quick-pick list of current open terminals.
+   *
+   * @private
+   * @returns {Promise<vscode.Terminal | undefined>} A Promise that resolves
+   *  with the selected `vscode.Terminal`, if any; otherwise, resolve with
+   *  `undefined`.
+   * @memberof DefaultContext
+   */
+  private async quickPickOpenTerminals(): Promise<vscode.Terminal | undefined> {
+    const options: vscode.QuickPickOptions = {
+      matchOnDescription: true,
+      placeHolder: localize(
+        "quickPickSwitchOpenTerminalsPlaceHolder",
+        "Select a terminal"
+      )
+    };
+
+    const icon = "$(terminal)";
+    const prefix = icon + " ";
+    const makeTitle = (t: vscode.Terminal) => prefix + t.name;
+    const makeDescription = (t: vscode.Terminal) => `(${t.processId})`;
+    const makeQuickPickItem = (t: vscode.Terminal): vscode.QuickPickItem => ({
+      label: makeTitle(t),
+      description: makeDescription(t)
+    });
+
+    const makeEntry = (
+      t: vscode.Terminal
+    ): [vscode.QuickPickItem, vscode.Terminal] => [makeQuickPickItem(t), t];
+    const map = new Map(vscode.window.terminals.map(makeEntry));
     const titles = Array.from(map.keys());
 
     const selection = await vscode.window.showQuickPick(titles, options);
@@ -199,6 +261,7 @@ export class DefaultContext implements Context {
     }
 
     this.updateRecentTerminalsListOrder(terminal);
+    this.openedTerminals.set(result, terminal);
 
     return result;
   }

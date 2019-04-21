@@ -20,4 +20,12 @@ export interface Context {
    * @memberof Context
    */
   askAndOpenTerminal(): Promise<void>;
+
+  /**
+   * Lists open terminals and switches to the selected terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  switchTerminal(): Promise<void>;
 }
