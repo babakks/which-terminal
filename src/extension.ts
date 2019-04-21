@@ -12,6 +12,11 @@ export function activate(context: vscode.ExtensionContext) {
       me
     ),
     vscode.commands.registerCommand(
+      "whichTerminal.setWorkspaceDefault",
+      me.askAndSetWorkspaceDefault,
+      me
+    ),
+    vscode.commands.registerCommand(
       "whichTerminal.openTerminal",
       me.askAndOpenTerminal,
       me

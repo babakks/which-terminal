@@ -70,8 +70,26 @@ export class DefaultContext implements Context {
    */
   async askAndSetDefault(): Promise<void> {
     const terminal = await this.quickPickTerminal(true);
+    if (!terminal) {
+      return;
+    }
 
-    throw new Error("Not implemented.");
+    this.setDefaultTerminal(terminal);
+  }
+
+  /**
+   * Asks for a shell template to sets as default *workspace* integrated shell.
+   *
+   * @returns {Promise<void>}
+   * @memberof DefaultContext
+   */
+  async askAndSetWorkspaceDefault(): Promise<void> {
+    const terminal = await this.quickPickTerminal(true);
+    if (!terminal) {
+      return;
+    }
+
+    this.setDefaultTerminal(terminal, true);
   }
 
   /**
@@ -285,6 +303,46 @@ export class DefaultContext implements Context {
     this.openedTerminals.set(result, terminal);
 
     return result;
+  }
+
+  /**
+   * Sets the default terminal to the given template.
+   *
+   * @param {Terminal} terminal New default terminal.
+   * @param {boolean} [globalScope=false] Set to `true` to set the *global*
+   *   default terminal.
+   * @memberof DefaultContext
+   */
+  private async setDefaultTerminal(
+    terminal: Terminal,
+    globalScope: boolean = false
+  ): Promise<void> {
+    const scope = globalScope;
+    const key = onPlatform(this.platform, "windows", "osx", "linux");
+
+    const shell = "terminal.integrated.shell";
+    const args = "terminal.integrated.shellArgs";
+    const envs = "terminal.integrated.envs";
+    const cwd = "terminal.integrated";
+
+    await this.updateConfigValue(shell, key, terminal.shell, scope);
+    await this.updateConfigValue(args, key, terminal.shellArgs || [], scope);
+    await this.updateConfigValue(envs, key, terminal.env || {}, scope);
+    await this.updateConfigValue(cwd, "cwd", terminal.cwd || "", scope);
+  }
+
+  private async updateConfigValue<T>(
+    section: string,
+    key: string,
+    value: T,
+    globalScope: boolean = false
+  ) {
+    const config = vscode.workspace.getConfiguration(section);
+    if (!config) {
+      return;
+    }
+
+    await config.update(key, value, globalScope);
   }
 
   /**

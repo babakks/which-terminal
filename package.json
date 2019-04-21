@@ -20,6 +20,10 @@
         "title": "Which Terminal: Set default terminal"
       },
       {
+        "command": "whichTerminal.setWorkspaceDefault",
+        "title": "Which Terminal: Set workspace default terminal"
+      },
+      {
         "command": "whichTerminal.openTerminal",
         "title": "Which Terminal: Open new terminal"
       },
