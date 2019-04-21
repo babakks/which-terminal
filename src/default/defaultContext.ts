@@ -224,7 +224,7 @@ export class DefaultContext implements Context {
 
     const prefix = "$(terminal)";
     const makeLabel = (t: vscode.Terminal, i: number) =>
-      `${prefix} ${i}: ${t.name}`;
+      `${prefix} ${1 + i}: ${t.name}`;
     const makeDescription = (t: vscode.Terminal, i: number) =>
       this.openedTerminals.has(t) ? "$(star)" : "";
     const makeQuickPickItem = (
