@@ -24,8 +24,8 @@
         "title": "Which Terminal: Open new terminal"
       },
       {
-        "command": "whichTerminal.switchTerminals",
-        "title": "Which Terminal: Switch terminals"
+        "command": "whichTerminal.switchTerminal",
+        "title": "Which Terminal: Switch terminal"
       }
     ],
     "configuration": {
