@@ -97,6 +97,15 @@ export class DefaultContext implements Context {
    * @memberof DefaultContext
    */
   async switchTerminal(): Promise<void> {
+    if (!vscode.window.terminals.length) {
+      // Showing an error message.
+      await vscode.window.showErrorMessage(
+        localize("noOpenTerminalPresent", "There's no open terminal.")
+      );
+
+      return;
+    }
+
     const terminal = await this.quickPickOpenTerminals();
 
     if (!terminal) {
@@ -197,10 +206,15 @@ export class DefaultContext implements Context {
    * @private
    * @returns {Promise<vscode.Terminal | undefined>} A Promise that resolves
    *  with the selected `vscode.Terminal`, if any; otherwise, resolve with
+   *  `undefined`. If there was no open terminal, the method returns
    *  `undefined`.
    * @memberof DefaultContext
    */
   private async quickPickOpenTerminals(): Promise<vscode.Terminal | undefined> {
+    if (!vscode.window.terminals.length) {
+      return undefined;
+    }
+
     const options: vscode.QuickPickOptions = {
       matchOnDescription: true,
       placeHolder: localize(
@@ -212,7 +226,7 @@ export class DefaultContext implements Context {
     const icon = "$(terminal)";
     const prefix = icon + " ";
     const makeTitle = (t: vscode.Terminal) => prefix + t.name;
-    const makeDescription = (t: vscode.Terminal) => `(${t.processId})`;
+    const makeDescription = (t: vscode.Terminal) => "";
     const makeQuickPickItem = (t: vscode.Terminal): vscode.QuickPickItem => ({
       label: makeTitle(t),
       description: makeDescription(t)

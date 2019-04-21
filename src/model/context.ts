@@ -24,7 +24,10 @@ export interface Context {
   /**
    * Lists open terminals and switches to the selected terminal.
    *
-   * @returns {Promise<void>}
+   * @returns {Promise<vscode.Terminal | undefined>} A Promise that resolves
+   *  with the selected `vscode.Terminal`, if any; otherwise, resolve with
+   *  `undefined`. If there was no open terminal, the method returns
+   *  `undefined`.
    * @memberof Context
    */
   switchTerminal(): Promise<void>;
