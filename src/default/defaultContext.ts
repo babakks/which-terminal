@@ -75,7 +75,7 @@ export class DefaultContext implements Context {
     }
 
     this.createTerminal(terminal);
-    this.updateTerminalOrder(terminal);
+    this.updateRecentTerminalsListOrder(terminal);
   }
 
   /**
@@ -134,6 +134,7 @@ export class DefaultContext implements Context {
     }
 
     const options: vscode.QuickPickOptions = {
+      matchOnDescription: true,
       placeHolder: selectDefault
         ? localize(
             "quickPickSelectDefaultTerminalPlaceHolder",
@@ -144,14 +145,24 @@ export class DefaultContext implements Context {
 
     const icon = "$(terminal)";
     const prefix = icon + " ";
-    const makeTitle = (t: Terminal) => prefix + (t.title || t.shell);
-    const makeEntry = (t: Terminal): [string, Terminal] => [makeTitle(t), t];
+    // const makeTitle = (t: Terminal) => prefix + (t.title || t.shell);
+    // const makeEntry = (t: Terminal): [string, Terminal] => [makeTitle(t), t];
+    // const map = new Map(terminals.map(makeEntry));
+    // const titles = Array.from(map.keys());
 
+    const makeQuickPickItem = (t: Terminal): vscode.QuickPickItem => ({
+      label: prefix + (t.title || t.shell),
+      description: t.title ? t.shell : ""
+    });
+
+    const makeEntry = (t: Terminal): [vscode.QuickPickItem, Terminal] => [
+      makeQuickPickItem(t),
+      t
+    ];
     const map = new Map(terminals.map(makeEntry));
     const titles = Array.from(map.keys());
 
     const selection = await vscode.window.showQuickPick(titles, options);
-
     return selection ? map.get(selection) : undefined;
   }
 
@@ -187,44 +198,58 @@ export class DefaultContext implements Context {
       result.show();
     }
 
-    this.updateTerminalOrder(terminal);
+    this.updateRecentTerminalsListOrder(terminal);
 
     return result;
   }
 
   /**
-   * Reorders given array of terminals by their usage frequency.
+   * Reorders given array of terminals so that recently-used items appear on the
+   * top.
    *
    * @private
    * @param {TerminalArray} terminals Array of terminals to reorder.
-   * @returns {TerminalArray} A `TerminalArray` ordered by usage frequency.
+   * @returns {TerminalArray} An ordered `TerminalArray`.
    * @memberof DefaultContext
    */
   private reorderTerminals(terminals: TerminalArray): TerminalArray {
-    const order = this.state.order;
+    const recentListSize = this.getConfiguration().recentTerminalsListSize;
+    if (!recentListSize) {
+      return terminals;
+    }
 
-    return new DefaultTerminalArray(
-      ...terminals.sort((a, b) => {
-        return order.indexOf(a.id) - order.indexOf(b.id);
-      })
+    const order = this.state.order.filter((x, i) => i < recentListSize);
+    if (!order.length) {
+      return terminals;
+    }
+
+    const recentItems = terminals.filter(x => -1 !== order.indexOf(x.id));
+    const otherItems = terminals.filter(x => -1 === recentItems.indexOf(x));
+
+    const sortedRecentItems = recentItems.sort(
+      (a, b) => order.indexOf(a.id) - order.indexOf(b.id)
     );
+
+    return new DefaultTerminalArray(...sortedRecentItems, ...otherItems);
   }
 
   /**
-   * Moves the given template to the top of the frequently used terminals.
+   * Moves the given template to the top of the recently-used terminals.
    *
    * @private
    * @param {Terminal} terminal
    * @memberof DefaultContext
    */
-  private updateTerminalOrder(terminal: Terminal): void {
-    const order = this.state.order;
-    const ix = order.indexOf(terminal.id);
-    if (ix === -1) {
-      this.state.order = [terminal.id, ...order];
-    } else {
-      order.splice(ix, 1);
-      this.state.order = [terminal.id, ...order];
+  private updateRecentTerminalsListOrder(terminal: Terminal): void {
+    const recentListSize = this.getConfiguration().recentTerminalsListSize;
+    if (!recentListSize) {
+      return;
     }
+
+    // Moving/adding the terminal's ID to the top of the list.
+    this.state.order = [
+      terminal.id,
+      ...this.state.order.filter(x => x !== terminal.id) // Removing the terminal's ID from the rest of the list.
+    ].filter((_x, i) => i < recentListSize); // Truncating the list to `recentListSize` items.;
   }
 }

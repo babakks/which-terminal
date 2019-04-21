@@ -27,6 +27,11 @@
     "configuration": {
       "title": "Which Terminal?",
       "properties": {
+        "whichTerminal.recentTerminalsListSize": {
+          "type": "number",
+          "minimum": 0,
+          "default": 3
+        },
         "whichTerminal.windowsTerminals": {
           "type": "array",
           "items": {

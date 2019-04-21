@@ -4,6 +4,7 @@ import { DefaultTerminalArray } from "./DefaultTerminalArray";
 
 export class DefaultConfiguration implements Configuration {
   constructor(
+    public recentTerminalsListSize: number,
     public windowsTerminals: TerminalArray,
     public linuxTerminals: TerminalArray,
     public osxTerminals: TerminalArray
@@ -15,9 +16,10 @@ export class DefaultConfiguration implements Configuration {
     }
 
     return new DefaultConfiguration(
-      DefaultTerminalArray.from(object.windowsTerminals),
-      DefaultTerminalArray.from(object.osxTerminals),
-      DefaultTerminalArray.from(object.linuxTerminals)
+      object.recentTerminalsListSize,
+      DefaultTerminalArray.populateFrom(object.windowsTerminals),
+      DefaultTerminalArray.populateFrom(object.osxTerminals),
+      DefaultTerminalArray.populateFrom(object.linuxTerminals)
     );
   }
 }

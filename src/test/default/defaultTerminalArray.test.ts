@@ -17,7 +17,7 @@ describe("DefaultTerminalArray", () => {
           }
         ];
 
-        expect(() => DefaultTerminalArray.from(badArgument)).to.throw(); // "Act" & "Assert"
+        expect(() => DefaultTerminalArray.populateFrom(badArgument)).to.throw(); // "Act" & "Assert"
         expect(spy.called).to.be.true;
         expect(spy.returned(false)).to.be.true;
 
@@ -33,7 +33,7 @@ describe("DefaultTerminalArray", () => {
           }
         ];
 
-        expect(() => DefaultTerminalArray.from(argument)).to.not.throw(); // "Act" & "Assert"
+        expect(() => DefaultTerminalArray.populateFrom(argument)).to.not.throw(); // "Act" & "Assert"
         expect(spy.called).to.be.true;
         expect(spy.returned(true)).to.be.true;
 
@@ -43,17 +43,17 @@ describe("DefaultTerminalArray", () => {
 
     describe("should fail on incompatible argument", () => {
       it("`undefined`/`null` argument", () => {
-        expect(() => DefaultTerminalArray.from(undefined)).to.throw();
-        expect(() => DefaultTerminalArray.from(null)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(undefined)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(null)).to.throw();
       });
 
       it("primitive argument", () => {
-        expect(() => DefaultTerminalArray.from(true)).to.throw();
-        expect(() => DefaultTerminalArray.from(false)).to.throw();
-        expect(() => DefaultTerminalArray.from("some-string")).to.throw();
-        expect(() => DefaultTerminalArray.from(123456)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(true)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(false)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom("some-string")).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(123456)).to.throw();
         expect(() =>
-          DefaultTerminalArray.from(new Date("2000-01-01"))
+          DefaultTerminalArray.populateFrom(new Date("2000-01-01"))
         ).to.throw();
       });
 
@@ -62,13 +62,13 @@ describe("DefaultTerminalArray", () => {
           someUnknownProperty: true
         };
 
-        expect(() => DefaultTerminalArray.from(badArgument)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(badArgument)).to.throw();
       });
 
       it("array with `undefined`/`null` items", () => {
-        expect(() => DefaultTerminalArray.from([undefined])).to.throw();
-        expect(() => DefaultTerminalArray.from([null])).to.throw();
-        expect(() => DefaultTerminalArray.from([undefined, null])).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom([undefined])).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom([null])).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom([undefined, null])).to.throw();
       });
 
       it("array with some incorrect-type items", () => {
@@ -84,7 +84,7 @@ describe("DefaultTerminalArray", () => {
           }
         ];
 
-        expect(() => DefaultTerminalArray.from(badArgument)).to.throw();
+        expect(() => DefaultTerminalArray.populateFrom(badArgument)).to.throw();
       });
     });
 
@@ -97,7 +97,7 @@ describe("DefaultTerminalArray", () => {
           }
         ];
 
-        const value = DefaultTerminalArray.from(argument);
+        const value = DefaultTerminalArray.populateFrom(argument);
 
         expect(value).to.be.an("array");
         expect(value[0]).to.have.property("id", argument[0].id);
@@ -117,7 +117,7 @@ describe("DefaultTerminalArray", () => {
           }
         ];
 
-        const value = DefaultTerminalArray.from(argument);
+        const value = DefaultTerminalArray.populateFrom(argument);
 
         expect(value).to.be.an("array");
         expect(value[0]).to.have.property("id", argument[0].id);

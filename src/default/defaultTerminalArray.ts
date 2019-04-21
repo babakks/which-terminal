@@ -7,13 +7,20 @@ export class DefaultTerminalArray extends Array<DefaultTerminal>
     super(...items);
   }
 
-  static from(object: unknown): DefaultTerminalArray {
+  static populateFrom(
+    object: unknown,
+    sort: boolean = true
+  ): DefaultTerminalArray {
     if (!isTerminalArray(object)) {
       throw new Error("Argument is not a `Configuration` object.");
     }
 
-    return new DefaultTerminalArray(
-      ...object.map(x => DefaultTerminal.from(x))
-    );
+    const items = object.map(x => DefaultTerminal.from(x));
+
+    return !sort
+      ? new DefaultTerminalArray(...items)
+      : new DefaultTerminalArray(
+          ...items.sort((a, b) => a.id.localeCompare(b.id))
+        );
   }
 }
