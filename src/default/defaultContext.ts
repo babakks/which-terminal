@@ -180,9 +180,8 @@ export class DefaultContext implements Context {
         : localize("quickPickSelectTerminalPlaceHolder", "Select terminal")
     };
 
-    const icon = "$(terminal)";
-    const prefix = icon + " ";
-    const makeLabel = (t: Terminal) => prefix + (t.title || t.shell);
+    const prefix = "$(terminal)";
+    const makeLabel = (t: Terminal) => `${prefix} ${t.title || t.shell}`;
     const makeDescription = (t: Terminal) => (t.title ? t.shell : "");
     const makeQuickPickItem = (t: Terminal): vscode.QuickPickItem => ({
       label: makeLabel(t),
@@ -223,18 +222,23 @@ export class DefaultContext implements Context {
       )
     };
 
-    const icon = "$(terminal)";
-    const prefix = icon + " ";
-    const makeTitle = (t: vscode.Terminal) => prefix + t.name;
-    const makeDescription = (t: vscode.Terminal) => "";
-    const makeQuickPickItem = (t: vscode.Terminal): vscode.QuickPickItem => ({
-      label: makeTitle(t),
-      description: makeDescription(t)
+    const prefix = "$(terminal)";
+    const makeLabel = (t: vscode.Terminal, i: number) =>
+      `${prefix} ${i}: ${t.name}`;
+    const makeDescription = (t: vscode.Terminal, i: number) =>
+      this.openedTerminals.has(t) ? "$(star)" : "";
+    const makeQuickPickItem = (
+      t: vscode.Terminal,
+      i: number
+    ): vscode.QuickPickItem => ({
+      label: makeLabel(t, i),
+      description: makeDescription(t, i)
     });
 
     const makeEntry = (
-      t: vscode.Terminal
-    ): [vscode.QuickPickItem, vscode.Terminal] => [makeQuickPickItem(t), t];
+      t: vscode.Terminal,
+      i: number
+    ): [vscode.QuickPickItem, vscode.Terminal] => [makeQuickPickItem(t, i), t];
     const map = new Map(vscode.window.terminals.map(makeEntry));
     const titles = Array.from(map.keys());
 
