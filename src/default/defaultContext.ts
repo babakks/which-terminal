@@ -177,7 +177,10 @@ export class DefaultContext implements Context {
             "quickPickSelectDefaultTerminalPlaceHolder",
             "Select a terminal to set as default"
           )
-        : localize("quickPickSelectTerminalPlaceHolder", "Select a terminal to open")
+        : localize(
+            "quickPickSelectTerminalPlaceHolder",
+            "Select a terminal to open"
+          )
     };
 
     const prefix = "$(terminal)";

@@ -34,12 +34,8 @@
         "key": "Ctrl+Alt+Shift+`"
       },
       {
-        "command": "whichTerminal.openTerminal",
-        "key": "Ctrl+k Ctrl+Shift+`"
-      },
-      {
         "command": "whichTerminal.switchTerminal",
-        "key": "Ctrl+k Ctrl+`"
+        "key": "Ctrl+Alt+`"
       }
     ],
     "configuration": {
