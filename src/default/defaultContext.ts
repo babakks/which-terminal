@@ -2,14 +2,13 @@ import { Context } from "../model/context";
 import { Configuration } from "../model/configuration";
 import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
-import { Platform, getPlatform, onPlatform } from "./state/platform";
-import { isOrder } from "./state/order";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
+import { Platform, getPlatform, onPlatform } from "./state/platform";
+import { State } from "./state/state";
 
 import * as vscode from "vscode";
 import * as nls from "vscode-nls";
-import { State } from "./state/state";
 
 const localize = nls.config()();
 
