@@ -28,6 +28,7 @@ describe("DefaultConfiguration", () => {
       it("should call `isConfiguration()` and proceed on a compatible argument", () => {
         const spy = sinon.spy(configurationModule, "isConfiguration");
         const argument = {
+          recentTerminalsListSize: 3,
           windowsTerminals: [{ shell: "shell.exe", id: "0000" }], // A `TerminalArray` item.
           linuxTerminals: [{ shell: "bash", id: "0001" }], // A `TerminalArray` item.
           osxTerminals: [] // A `TerminalArray` item.
@@ -69,6 +70,7 @@ describe("DefaultConfiguration", () => {
     describe("should work on correct type argument", () => {
       it("minimal argument (with empty arrays)", () => {
         const argument = {
+          recentTerminalsListSize: 0,
           windowsTerminals: [], // An empty `TerminalArray` item.
           linuxTerminals: [], // An empty `TerminalArray` item.
           osxTerminals: [] // An empty `TerminalArray` item.
@@ -83,6 +85,7 @@ describe("DefaultConfiguration", () => {
 
       it("maximal argument (with non-empty arrays)", () => {
         const argument = {
+          recentTerminalsListSize: 3,
           windowsTerminals: [{ shell: "shell.exe", id: "0000" }], // A `TerminalArray` item.
           linuxTerminals: [{ shell: "bash", id: "0001" }], // A `TerminalArray` item.
           osxTerminals: [{ shell: "bash", id: "0002" }] // A `TerminalArray` item.

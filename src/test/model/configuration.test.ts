@@ -47,6 +47,7 @@ describe("isConfiguration()", () => {
   describe("should work on correct type argument", () => {
     it("minimal argument (with only empty arrays)", () => {
       const argument = {
+        recentTerminalsListSize: 0,
         windowsTerminals: [],
         linuxTerminals: [],
         osxTerminals: []
@@ -57,6 +58,7 @@ describe("isConfiguration()", () => {
 
     it("maximal argument (with non-empty arrays)", () => {
       const argument = {
+        recentTerminalsListSize: 3,
         windowsTerminals: [
           {
             shell: "shell1",
@@ -85,6 +87,7 @@ describe("isConfiguration()", () => {
     it("incompatible argument", () => {
       const spy = sinon.spy(terminalArrayModule, "isTerminalArray");
       const argument = {
+        recentTerminalsListSize: 3,
         windowsTerminals: [], // A `TerminalArray` item.
         linuxTerminals: { field2: true }, // A `non-TerminalArray` item.
         osxTerminals: { field3: true } // A `non-TerminalArray` item.
@@ -112,6 +115,7 @@ describe("isConfiguration()", () => {
     it("compatible argument", () => {
       const spy = sinon.spy(terminalArrayModule, "isTerminalArray");
       const argument = {
+        recentTerminalsListSize: 3,
         windowsTerminals: [{ shell: "shell.exe", id: "0000" }], // A `TerminalArray` item.
         linuxTerminals: [{ shell: "bash", id: "0001" }], // A `TerminalArray` item.
         osxTerminals: [] // A `TerminalArray` item.
