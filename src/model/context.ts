@@ -37,5 +37,5 @@ export interface Context {
    *
    * @memberof Context
    */
-  switchNextTerminal(): void;
+  switchNextTerminal(): Promise<void>;
 }

@@ -114,12 +114,7 @@ export class DefaultContext implements Context {
    * @memberof DefaultContext
    */
   async switchTerminal(): Promise<void> {
-    if (!vscode.window.terminals.length) {
-      // Showing an error message.
-      await vscode.window.showErrorMessage(
-        localize("noOpenTerminalPresent", "There's no open terminal.")
-      );
-
+    if (!this.notifyIfNoOpenTerminal()) {
       return;
     }
 
@@ -130,6 +125,47 @@ export class DefaultContext implements Context {
     }
 
     terminal.show();
+  }
+
+  /**
+   * Switches to the next open terminal.
+   *
+   * @memberof Context
+   */
+  async switchNextTerminal(): Promise<void> {
+    if (!this.notifyIfNoOpenTerminal()) {
+      return;
+    }
+
+    const activeTerminal = vscode.window.activeTerminal;
+    const newTerminalIndex = !activeTerminal
+      ? 0
+      : (1 + vscode.window.terminals.indexOf(activeTerminal)) %
+        vscode.window.terminals.length;
+    const newTerminal = vscode.window.terminals[newTerminalIndex];
+
+    newTerminal.show(true);
+  }
+
+  /**
+   * Checks if there is any open terminal, and displays an error message if
+   * there was none.
+   *
+   * @private
+   * @returns {boolean} A Promise that resolves to `false` if no open terminal
+   *   was found; otherwise, resolves to `true`.
+   * @memberof DefaultContext
+   */
+  private async notifyIfNoOpenTerminal(): Promise<boolean> {
+    if (vscode.window.terminals.length) {
+      return true;
+    }
+
+    await vscode.window.showErrorMessage(
+      localize("noOpenTerminalPresent", "There's no open terminal.")
+    );
+
+    return false;
   }
 
   /**

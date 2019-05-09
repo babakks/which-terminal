@@ -25,6 +25,11 @@ export function activate(context: vscode.ExtensionContext) {
       "whichTerminal.switch",
       me.switchTerminal,
       me
+    ),
+    vscode.commands.registerCommand(
+      "whichTerminal.switchNext",
+      me.switchNextTerminal,
+      me
     )
   );
 }

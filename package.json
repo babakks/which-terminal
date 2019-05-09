@@ -30,6 +30,10 @@
       {
         "command": "whichTerminal.switch",
         "title": "Which Terminal: Switch terminal"
+      },
+      {
+        "command": "whichTerminal.switchNext",
+        "title": "Which Terminal: Switch to the next open terminal"
       }
     ],
     "keybindings": [
@@ -39,6 +43,10 @@
       },
       {
         "command": "whichTerminal.switch",
+        "key": "Alt+Shift+`"
+      },
+      {
+        "command": "whichTerminal.switchNext",
         "key": "Ctrl+Alt+`"
       }
     ],
