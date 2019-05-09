@@ -4,7 +4,6 @@ import { expect } from "chai";
 import * as sinon from "sinon";
 import * as terminalArrayModule from "../../model/terminalArray";
 import { isConfiguration } from "../../model/configuration";
-import { ifError } from "assert";
 
 describe("isConfiguration()", () => {
   afterEach(() => {

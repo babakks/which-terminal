@@ -137,6 +137,16 @@ export class DefaultContext implements Context {
       return;
     }
 
+    this.focusNextTerminal();
+  }
+
+  /**
+   * Focuses on the next open terminal, if any.
+   *
+   * @private
+   * @memberof DefaultContext
+   */
+  private focusNextTerminal(): void {
     const activeTerminal = vscode.window.activeTerminal;
     const newTerminalIndex = !activeTerminal
       ? 0
