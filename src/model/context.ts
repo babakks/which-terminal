@@ -31,4 +31,11 @@ export interface Context {
    * @memberof Context
    */
   switchTerminal(): Promise<void>;
+
+  /**
+   * Switches to the next open terminal.
+   *
+   * @memberof Context
+   */
+  switchNextTerminal(): void;
 }
