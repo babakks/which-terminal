@@ -1,5 +1,5 @@
 import { Platform, onPlatform, getPlatform } from "./platform";
-import { Order, isOrder } from "./order";
+import { Order, isOrder } from "../../model/order";
 import { State } from "../../model/state";
 import * as vscode from "vscode";
 
