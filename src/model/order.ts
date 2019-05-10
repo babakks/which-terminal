@@ -1,4 +1,4 @@
-import { isStringArray } from "../../model/terminal";
+import { isStringArray } from "./terminal";
 
 export type Order = string[];
 
