@@ -35,12 +35,12 @@ describe("isState()", () => {
 
   describe("should work on correct type argument", () => {
     it("empty array", () => {
-      const argument: any[] = [];
+      const argument = { order: [] };
       expect(isState(argument)).to.be.true;
     });
 
     it("non-empty array", () => {
-      const argument = ["item1", "item2"];
+      const argument = { order: ["item1", "item2"] };
       expect(isState(argument)).to.be.true;
     });
   });
@@ -53,14 +53,8 @@ describe("isState()", () => {
       };
 
       expect(isState(argument)).to.be.false;
-      expect(spy.returned(false)).to.be.true;
-
-      /**
-       * Either it's never been called with compatible argument, or at least
-       * once it's returned `true`.
-       */
-      expect(!spy.calledWith(argument.order) || spy.returned(true)).to.be.true;
       expect(spy.calledWith(argument.order)).to.be.true;
+      expect(spy.returned(false)).to.be.true;
     });
 
     it("compatible argument", () => {
