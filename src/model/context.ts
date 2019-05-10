@@ -1,3 +1,5 @@
+import { State } from "./state";
+
 /**
  * Defines extension behaviors and data.
  *
@@ -5,6 +7,14 @@
  * @interface Context
  */
 export interface Context {
+  /**
+   * Extension's state.
+   *
+   * @type {State}
+   * @memberof Context
+   */
+  state: State;
+
   /**
    * Asks for a shell template to sets as default integrated shell.
    *

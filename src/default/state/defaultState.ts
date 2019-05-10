@@ -1,14 +1,15 @@
 import { Platform, onPlatform, getPlatform } from "./platform";
 import { Order, isOrder } from "./order";
+import { State } from "../../model/state";
 import * as vscode from "vscode";
 
 /**
  * Encapsulates `DefaultContext` state.
  *
  * @export
- * @class State
+ * @class DefaultState
  */
-export class State {
+export class DefaultState implements State {
   platform: Platform;
 
   constructor(private vscodeContext: vscode.ExtensionContext) {
