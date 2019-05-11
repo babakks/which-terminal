@@ -1,4 +1,4 @@
-import { Platform, onPlatform, getPlatform } from "../../model/platform";
+import { Platform, onPlatform } from "../../model/platform";
 import { Order, isOrder } from "../../model/order";
 import { State } from "../../model/state";
 import * as vscode from "vscode";
