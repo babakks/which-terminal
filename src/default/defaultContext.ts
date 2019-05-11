@@ -5,7 +5,7 @@ import { TerminalArray } from "../model/terminalArray";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
 import { Platform, getPlatform, onPlatform } from "../model/platform";
-import { DefaultState } from "./state/defaultState";
+import { State } from "../model/state";
 
 import * as vscode from "vscode";
 import * as nls from "vscode-nls";
@@ -19,24 +19,6 @@ const localize = nls.config()();
  * @interface Context
  */
 export class DefaultContext implements Context {
-  /**
-   * Current running platform.
-   *
-   * @private
-   * @type {Platform}
-   * @memberof DefaultContext
-   */
-  private platform: Platform;
-
-  /**
-   * Current extension state.
-   *
-   * @private
-   * @type {DefaultState}
-   * @memberof DefaultContext
-   */
-  state: DefaultState;
-
   /**
    * Map of terminals opened by the extension.
    *
@@ -52,10 +34,11 @@ export class DefaultContext implements Context {
    *   object.
    * @memberof DefaultContext
    */
-  constructor(private vscodeContext: vscode.ExtensionContext) {
-    this.platform = getPlatform();
-    this.state = new DefaultState(this.platform, this.vscodeContext);
-
+  constructor(
+    private platform: Platform,
+    private vscodeContext: vscode.ExtensionContext,
+    public state: State
+  ) {
     vscode.window.onDidCloseTerminal((e: vscode.Terminal) => {
       this.openedTerminals.delete(e);
     });

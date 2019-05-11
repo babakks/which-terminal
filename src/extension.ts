@@ -1,9 +1,12 @@
 import { DefaultContext } from "./default/defaultContext";
-
 import * as vscode from "vscode";
+import { getPlatform } from "./model/platform";
+import { DefaultState } from "./default/state/defaultState";
 
 export function activate(context: vscode.ExtensionContext) {
-  const me = new DefaultContext(context);
+  const platform = getPlatform();
+  const state = new DefaultState(platform, context);
+  const me = new DefaultContext(platform, context, state);
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
