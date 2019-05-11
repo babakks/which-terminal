@@ -4,7 +4,7 @@ import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
-import { Platform, getPlatform, onPlatform } from "./state/platform";
+import { Platform, getPlatform, onPlatform } from "../model/platform";
 import { DefaultState } from "./state/defaultState";
 
 import * as vscode from "vscode";
@@ -54,7 +54,7 @@ export class DefaultContext implements Context {
    */
   constructor(private vscodeContext: vscode.ExtensionContext) {
     this.platform = getPlatform();
-    this.state = new DefaultState(this.vscodeContext);
+    this.state = new DefaultState(this.platform, this.vscodeContext);
 
     vscode.window.onDidCloseTerminal((e: vscode.Terminal) => {
       this.openedTerminals.delete(e);

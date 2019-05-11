@@ -1,4 +1,4 @@
-import { Platform, onPlatform, getPlatform } from "./platform";
+import { Platform, onPlatform, getPlatform } from "../../model/platform";
 import { Order, isOrder } from "../../model/order";
 import { State } from "../../model/state";
 import * as vscode from "vscode";
@@ -10,11 +10,10 @@ import * as vscode from "vscode";
  * @class DefaultState
  */
 export class DefaultState implements State {
-  platform: Platform;
-
-  constructor(private vscodeContext: vscode.ExtensionContext) {
-    this.platform = getPlatform();
-  }
+  constructor(
+    private platform: Platform,
+    private vscodeContext: vscode.ExtensionContext
+  ) {}
 
   get order(): Order {
     const value = this.vscodeContext.workspaceState.get(
