@@ -28,12 +28,24 @@
         "title": "Which Terminal: Open new terminal"
       },
       {
+        "command": "whichTerminal.openAs",
+        "title": "Which Terminal: Open new terminal as..."
+      },
+      {
         "command": "whichTerminal.switch",
         "title": "Which Terminal: Switch terminal"
       },
       {
         "command": "whichTerminal.switchNext",
         "title": "Which Terminal: Switch to the next open terminal"
+      },
+      {
+        "command": "whichTerminal.closeAll",
+        "title": "Which Terminal: Close all terminals"
+      },
+      {
+        "command": "whichTerminal.close",
+        "title": "Which Terminal: Closes current active terminal"
       }
     ],
     "keybindings": [
@@ -42,12 +54,12 @@
         "key": "Ctrl+Alt+Shift+`"
       },
       {
-        "command": "whichTerminal.switch",
-        "key": "Alt+Shift+`"
-      },
-      {
         "command": "whichTerminal.switchNext",
         "key": "Ctrl+Alt+`"
+      },
+      {
+        "command": "whichTerminal.close",
+        "key": "Ctrl+Alt+w"
       }
     ],
     "configuration": {

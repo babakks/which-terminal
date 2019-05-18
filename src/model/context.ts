@@ -21,7 +21,15 @@ export interface Context {
    * @returns {Promise<void>}
    * @memberof Context
    */
-  askAndSetDefault(): Promise<void>;
+  askAndSetDefaultTerminal(): Promise<void>;
+
+  /**
+   * Asks for a shell template to sets as default *workspace* integrated shell.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  askAndSetWorkspaceDefault(): Promise<void>;
 
   /**
    * Asks for a shell template to open as a new integrated shell.
@@ -32,6 +40,15 @@ export interface Context {
   askAndOpenTerminal(): Promise<void>;
 
   /**
+   * Asks for a shell template to open as a new integrated shell. The user is
+   * also asked to set a title for the new terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  askAndOpenEntitledTerminal(): Promise<void>;
+
+  /**
    * Lists open terminals and switches to the selected terminal.
    *
    * @returns {Promise<vscode.Terminal | undefined>} A Promise that resolves
@@ -40,12 +57,29 @@ export interface Context {
    *  `undefined`.
    * @memberof Context
    */
-  switchTerminal(): Promise<void>;
+  askAndSwitchTerminal(): Promise<void>;
 
   /**
    * Switches to the next open terminal.
    *
+   * @returns {Promise<void>}
    * @memberof Context
    */
   switchNextTerminal(): Promise<void>;
+
+  /**
+   * Closes all open terminals.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  closeAllTerminals(): Promise<void>;
+
+  /**
+   * Closes current open terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  closeCurrentTerminal(): Promise<void>;
 }

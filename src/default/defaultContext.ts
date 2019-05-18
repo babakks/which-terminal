@@ -4,8 +4,8 @@ import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
-import { Platform, getPlatform, onPlatform } from "./state/platform";
-import { DefaultState } from "./state/defaultState";
+import { Platform, onPlatform } from "../model/platform";
+import { State } from "../model/state";
 
 import * as vscode from "vscode";
 import * as nls from "vscode-nls";
@@ -19,24 +19,6 @@ const localize = nls.config()();
  * @interface Context
  */
 export class DefaultContext implements Context {
-  /**
-   * Current running platform.
-   *
-   * @private
-   * @type {Platform}
-   * @memberof DefaultContext
-   */
-  private platform: Platform;
-
-  /**
-   * Current extension state.
-   *
-   * @private
-   * @type {DefaultState}
-   * @memberof DefaultContext
-   */
-  state: DefaultState;
-
   /**
    * Map of terminals opened by the extension.
    *
@@ -52,10 +34,11 @@ export class DefaultContext implements Context {
    *   object.
    * @memberof DefaultContext
    */
-  constructor(private vscodeContext: vscode.ExtensionContext) {
-    this.platform = getPlatform();
-    this.state = new DefaultState(this.vscodeContext);
-
+  constructor(
+    private platform: Platform,
+    private vscodeContext: vscode.ExtensionContext,
+    public state: State
+  ) {
     vscode.window.onDidCloseTerminal((e: vscode.Terminal) => {
       this.openedTerminals.delete(e);
     });
@@ -67,7 +50,7 @@ export class DefaultContext implements Context {
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async askAndSetDefault(): Promise<void> {
+  async askAndSetDefaultTerminal(): Promise<void> {
     const terminal = await this.quickPickTerminal(true);
     if (!terminal) {
       return;
@@ -103,8 +86,30 @@ export class DefaultContext implements Context {
       return;
     }
 
-    this.createTerminal(terminal);
-    this.updateRecentTerminalsListOrder(terminal);
+    this.openTerminal(terminal);
+  }
+
+  /**
+   * Asks for a shell template to open as a new integrated shell. The user is
+   * also asked to set a title for the new terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof DefaultContext
+   */
+  async askAndOpenEntitledTerminal(): Promise<void> {
+    const terminal = await this.quickPickTerminal(false);
+    if (!terminal) {
+      return;
+    }
+
+    const prompt = localize(
+      "enterATitleForNewTerminal",
+      "Enter a title for the new terminal"
+    );
+
+    const title = await this.showInputBox(prompt, false);
+
+    this.openTerminal(terminal, title);
   }
 
   /**
@@ -113,7 +118,7 @@ export class DefaultContext implements Context {
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async switchTerminal(): Promise<void> {
+  async askAndSwitchTerminal(): Promise<void> {
     if (!this.notifyIfNoOpenTerminal()) {
       return;
     }
@@ -141,6 +146,30 @@ export class DefaultContext implements Context {
   }
 
   /**
+   * Closes all open terminals.
+   *
+   * @returns {Promise<void>}
+   * @memberof DefaultContext
+   */
+  async closeAllTerminals(): Promise<void> {
+    vscode.window.terminals.forEach(x => x.dispose());
+  }
+
+  /**
+   * Closes current open terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof DefaultContext
+   */
+  async closeCurrentTerminal(): Promise<void> {
+    if (!vscode.window.activeTerminal) {
+      return;
+    }
+
+    vscode.window.activeTerminal.dispose();
+  }
+
+  /**
    * Focuses on the next open terminal, if any.
    *
    * @private
@@ -154,7 +183,7 @@ export class DefaultContext implements Context {
         vscode.window.terminals.length;
     const newTerminal = vscode.window.terminals[newTerminalIndex];
 
-    newTerminal.show(true);
+    newTerminal.show();
   }
 
   /**
@@ -313,10 +342,65 @@ export class DefaultContext implements Context {
   }
 
   /**
+   * Opens an input box for the user to enter a text.
+   *
+   * @private
+   * @param {string} prompt The prompt to show.
+   * @param {boolean} [acceptEmpty=false] Indicates whether an empty input could
+   *   be accepted.
+   * @returns {(Promise<string | undefined>)} A Promise that resolves with the
+   *   entered text. If the user refuses to fill the input box, the method
+   *   returns `undefined`.
+   * @memberof DefaultContext
+   */
+  private async showInputBox(
+    prompt: string,
+    acceptEmpty: boolean = false
+  ): Promise<string | undefined> {
+    const options: vscode.InputBoxOptions = {
+      prompt: prompt
+    };
+
+    if (acceptEmpty) {
+      options.validateInput = value => (value.length !== 0 ? undefined : "");
+    }
+
+    return await vscode.window.showInputBox(options);
+  }
+
+  /**
+   * Opens a terminal given a template.
+   *
+   * @private
+   * @param {Terminal} terminal The `Terminal` object describing the template.
+   * @param {string} title Title of the terminal. If not provided,
+   *   `terminal.title` is used, if any.
+   * @param {boolean} [show=true] Indicates whether to show the terminal once
+   *   it's created.
+   * @returns {vscode.Terminal} The created `vscode.Terminal` instance.
+   * @memberof DefaultContext
+   */
+  private openTerminal(
+    terminal: Terminal,
+    title?: string,
+    show: boolean = true
+  ): vscode.Terminal {
+    const result = this.createTerminal(
+      terminal,
+      title !== undefined ? title : terminal.title,
+      show
+    );
+    this.updateRecentTerminalsListOrder(terminal);
+
+    return result;
+  }
+
+  /**
    * Creates a new integrated terminal given the underlying shell template.
    *
    * @private
    * @param {Terminal} terminal The `Terminal` object describing the template.
+   * @param {string} title Title of the terminal.
    * @param {boolean} [show=true] Indicates whether to show the terminal once
    *   it's created.
    * @returns {vscode.Terminal} The created `vscode.Terminal` instance.
@@ -324,11 +408,12 @@ export class DefaultContext implements Context {
    */
   private createTerminal(
     terminal: Terminal,
+    title?: string,
     show: boolean = true
   ): vscode.Terminal {
     const options: vscode.TerminalOptions = {
       env: terminal.env,
-      name: terminal.title,
+      name: title,
       shellPath: terminal.shell,
       shellArgs: terminal.shellArgs,
       cwd: terminal.cwd

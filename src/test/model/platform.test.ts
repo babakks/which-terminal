@@ -5,7 +5,7 @@ import {
   getPlatform,
   Platform,
   onPlatform
-} from "../../default/state/platform";
+} from "../../model/platform";
 import * as sinon from "sinon";
 
 describe("Platform", () => {
