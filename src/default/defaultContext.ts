@@ -4,7 +4,7 @@ import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
 import { DefaultTerminalArray } from "./DefaultTerminalArray";
 import { Terminal } from "../model/terminal";
-import { Platform, getPlatform, onPlatform } from "../model/platform";
+import { Platform, onPlatform } from "../model/platform";
 import { State } from "../model/state";
 
 import * as vscode from "vscode";
