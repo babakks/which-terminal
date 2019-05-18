@@ -27,6 +27,11 @@ export function activate(context: vscode.ExtensionContext) {
       me
     ),
     vscode.commands.registerCommand(
+      "whichTerminal.openAs",
+      me.askAndOpenEntitledTerminal,
+      me
+    ),
+    vscode.commands.registerCommand(
       "whichTerminal.switch",
       me.askAndSwitchTerminal,
       me

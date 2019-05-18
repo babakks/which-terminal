@@ -28,6 +28,10 @@
         "title": "Which Terminal: Open new terminal"
       },
       {
+        "command": "whichTerminal.openAs",
+        "title": "Which Terminal: Open new terminal as..."
+      },
+      {
         "command": "whichTerminal.switch",
         "title": "Which Terminal: Switch terminal"
       },

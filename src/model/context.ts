@@ -40,6 +40,15 @@ export interface Context {
   askAndOpenTerminal(): Promise<void>;
 
   /**
+   * Asks for a shell template to open as a new integrated shell. The user is
+   * also asked to set a title for the new terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  askAndOpenEntitledTerminal(): Promise<void>;
+
+  /**
    * Lists open terminals and switches to the selected terminal.
    *
    * @returns {Promise<vscode.Terminal | undefined>} A Promise that resolves
