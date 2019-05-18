@@ -21,7 +21,7 @@ export interface Context {
    * @returns {Promise<void>}
    * @memberof Context
    */
-  askAndSetDefault(): Promise<void>;
+  askAndSetDefaultTerminal(): Promise<void>;
 
   /**
    * Asks for a shell template to open as a new integrated shell.
@@ -40,7 +40,7 @@ export interface Context {
    *  `undefined`.
    * @memberof Context
    */
-  switchTerminal(): Promise<void>;
+  askAndSwitchTerminal(): Promise<void>;
 
   /**
    * Switches to the next open terminal.
@@ -48,4 +48,12 @@ export interface Context {
    * @memberof Context
    */
   switchNextTerminal(): Promise<void>;
+
+  /**
+   * Closes all open terminals.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  closeAllTerminals(): Promise<void>;
 }

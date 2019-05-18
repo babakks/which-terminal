@@ -2,16 +2,17 @@ import { DefaultContext } from "./default/defaultContext";
 import * as vscode from "vscode";
 import { getPlatform } from "./model/platform";
 import { DefaultState } from "./default/state/defaultState";
+import { Context } from "./model/context";
 
 export function activate(context: vscode.ExtensionContext) {
   const platform = getPlatform();
   const state = new DefaultState(platform, context);
-  const me = new DefaultContext(platform, context, state);
+  const me: Context = new DefaultContext(platform, context, state);
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
       "whichTerminal.setDefault",
-      me.askAndSetDefault,
+      me.askAndSetDefaultTerminal,
       me
     ),
     vscode.commands.registerCommand(
@@ -26,12 +27,17 @@ export function activate(context: vscode.ExtensionContext) {
     ),
     vscode.commands.registerCommand(
       "whichTerminal.switch",
-      me.switchTerminal,
+      me.askAndSwitchTerminal,
       me
     ),
     vscode.commands.registerCommand(
       "whichTerminal.switchNext",
       me.switchNextTerminal,
+      me
+    ),
+    vscode.commands.registerCommand(
+      "whichTerminal.closeAll",
+      me.closeAllTerminals,
       me
     )
   );

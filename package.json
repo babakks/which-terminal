@@ -34,16 +34,16 @@
       {
         "command": "whichTerminal.switchNext",
         "title": "Which Terminal: Switch to the next open terminal"
+      },
+      {
+        "command": "whichTerminal.closeAll",
+        "title": "Which Terminal: Close all terminals"
       }
     ],
     "keybindings": [
       {
         "command": "whichTerminal.open",
         "key": "Ctrl+Alt+Shift+`"
-      },
-      {
-        "command": "whichTerminal.switch",
-        "key": "Alt+Shift+`"
       },
       {
         "command": "whichTerminal.switchNext",

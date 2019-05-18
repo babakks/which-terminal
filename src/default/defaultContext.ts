@@ -50,7 +50,7 @@ export class DefaultContext implements Context {
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async askAndSetDefault(): Promise<void> {
+  async askAndSetDefaultTerminal(): Promise<void> {
     const terminal = await this.quickPickTerminal(true);
     if (!terminal) {
       return;
@@ -96,7 +96,7 @@ export class DefaultContext implements Context {
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async switchTerminal(): Promise<void> {
+  async askAndSwitchTerminal(): Promise<void> {
     if (!this.notifyIfNoOpenTerminal()) {
       return;
     }
@@ -121,6 +121,16 @@ export class DefaultContext implements Context {
     }
 
     this.focusNextTerminal();
+  }
+
+  /**
+   * Closes all open terminals.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  async closeAllTerminals(): Promise<void> {
+    vscode.window.terminals.forEach(x => x.dispose());
   }
 
   /**
