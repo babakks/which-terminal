@@ -1,12 +1,13 @@
-import { DefaultContext } from "./default/defaultContext";
 import * as vscode from "vscode";
+import { DefaultContext } from "./default/defaultContext";
 import { getPlatform } from "./model/platform";
 import { DefaultState } from "./default/state/defaultState";
 import { Context } from "./model/context";
+import { State } from "./model/state";
 
 export function activate(context: vscode.ExtensionContext) {
   const platform = getPlatform();
-  const state = new DefaultState(platform, context);
+  const state: State = new DefaultState(platform, context);
   const me: Context = new DefaultContext(platform, context, state);
 
   context.subscriptions.push(
@@ -38,6 +39,11 @@ export function activate(context: vscode.ExtensionContext) {
     vscode.commands.registerCommand(
       "whichTerminal.closeAll",
       me.closeAllTerminals,
+      me
+    ),
+    vscode.commands.registerCommand(
+      "whichTerminal.close",
+      me.closeCurrentTerminal,
       me
     )
   );

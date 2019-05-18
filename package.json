@@ -38,6 +38,10 @@
       {
         "command": "whichTerminal.closeAll",
         "title": "Which Terminal: Close all terminals"
+      },
+      {
+        "command": "whichTerminal.close",
+        "title": "Which Terminal: Closes current active terminal"
       }
     ],
     "keybindings": [
@@ -48,6 +52,10 @@
       {
         "command": "whichTerminal.switchNext",
         "key": "Ctrl+Alt+`"
+      },
+      {
+        "command": "whichTerminal.close",
+        "key": "Ctrl+Alt+w"
       }
     ],
     "configuration": {

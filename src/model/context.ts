@@ -24,6 +24,14 @@ export interface Context {
   askAndSetDefaultTerminal(): Promise<void>;
 
   /**
+   * Asks for a shell template to sets as default *workspace* integrated shell.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  askAndSetWorkspaceDefault(): Promise<void>;
+
+  /**
    * Asks for a shell template to open as a new integrated shell.
    *
    * @returns {Promise<void>}
@@ -45,6 +53,7 @@ export interface Context {
   /**
    * Switches to the next open terminal.
    *
+   * @returns {Promise<void>}
    * @memberof Context
    */
   switchNextTerminal(): Promise<void>;
@@ -56,4 +65,12 @@ export interface Context {
    * @memberof Context
    */
   closeAllTerminals(): Promise<void>;
+
+  /**
+   * Closes current open terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof Context
+   */
+  closeCurrentTerminal(): Promise<void>;
 }

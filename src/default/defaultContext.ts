@@ -127,10 +127,24 @@ export class DefaultContext implements Context {
    * Closes all open terminals.
    *
    * @returns {Promise<void>}
-   * @memberof Context
+   * @memberof DefaultContext
    */
   async closeAllTerminals(): Promise<void> {
     vscode.window.terminals.forEach(x => x.dispose());
+  }
+
+  /**
+   * Closes current open terminal.
+   *
+   * @returns {Promise<void>}
+   * @memberof DefaultContext
+   */
+  async closeCurrentTerminal(): Promise<void> {
+    if (!vscode.window.activeTerminal) {
+      return;
+    }
+
+    vscode.window.activeTerminal.dispose();
   }
 
   /**
@@ -147,7 +161,7 @@ export class DefaultContext implements Context {
         vscode.window.terminals.length;
     const newTerminal = vscode.window.terminals[newTerminalIndex];
 
-    newTerminal.show(true);
+    newTerminal.show();
   }
 
   /**
