@@ -4,11 +4,15 @@ import { getPlatform } from "./model/platform";
 import { DefaultState } from "./default/state/defaultState";
 import { Context } from "./model/context";
 import { State } from "./model/state";
+import { TerminalTreeDataProvider } from "./ui/terminalTreeDataProvider";
 
 export function activate(context: vscode.ExtensionContext) {
   const platform = getPlatform();
   const state: State = new DefaultState(platform, context);
   const me: Context = new DefaultContext(platform, context, state);
+
+  const dp = new TerminalTreeDataProvider(me);
+  vscode.window.registerTreeDataProvider("terminalExplorerView", dp);
 
   context.subscriptions.push(
     vscode.commands.registerCommand(

@@ -14,6 +14,7 @@ export class TerminalTreeDataProvider
 
   constructor(private context: Context) {
     this.onDidChangeTreeData = this.eventEmitter.event;
+    vscode.window.onDidOpenTerminal()
     this.context.onDidOpenTerminal.subscribe(this.onDidOpenTerminalHandler);
   }
 
@@ -33,7 +34,7 @@ export class TerminalTreeDataProvider
     return new TerminalTreeItem(visualTerminal);
   }
 
-  private onDidOpenTerminalHandler(e: OpenTerminalEventArgs) {
+  private onDidOpenTerminalHandler(e: vscode.Terminal) {    
     this.items.set(e.visualTerminal, this.createTreeItem(e.visualTerminal));
     this.notifyChange(e.visualTerminal);
   }
