@@ -1,9 +1,5 @@
 import * as vscode from "vscode";
 import { TerminalTreeItem } from "./terminalTreeItem";
-import { Terminal } from "../model/terminal";
-import { Context } from "../model/context";
-import { VisualTerminal } from "../model/visualTerminal";
-import { OpenTerminalEventArgs } from "../model/eventArgs/openTerminalEventArgs";
 
 export class TerminalTreeDataProvider
   implements vscode.TreeDataProvider<vscode.Terminal> {
@@ -12,7 +8,7 @@ export class TerminalTreeDataProvider
 
   onDidChangeTreeData: vscode.Event<vscode.Terminal>;
 
-  constructor(private context: Context) {
+  constructor() {
     this.onDidChangeTreeData = this.eventEmitter.event;
     vscode.window.onDidOpenTerminal(this.onDidOpenTerminalHandler, this);
     vscode.window.onDidCloseTerminal(this.onDidCloseTerminalHandler, this);

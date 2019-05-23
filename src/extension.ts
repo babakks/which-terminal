@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
   const state: State = new DefaultState(platform, context);
   const me: Context = new DefaultContext(platform, context, state);
 
-  const dp = new TerminalTreeDataProvider(me);
+  const dp = new TerminalTreeDataProvider();
   vscode.window.registerTreeDataProvider("terminalExplorerView", dp);
 
   context.subscriptions.push(

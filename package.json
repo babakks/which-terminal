@@ -17,38 +17,52 @@
     "commands": [
       {
         "command": "whichTerminal.setDefault",
-        "title": "Which Terminal: Set default terminal"
+        "category": "Which Terminal",
+        "title": "Set default terminal"
       },
       {
         "command": "whichTerminal.setWorkspaceDefault",
-        "title": "Which Terminal: Set workspace default terminal"
+        "category": "Which Terminal",
+        "title": "Set workspace default terminal"
       },
       {
         "command": "whichTerminal.open",
-        "title": "Which Terminal: Open new terminal",
-        "icon": "$(plus)"
+        "category": "Which Terminal",
+        "title": "Open new terminal",
+        "icon": "resources/plus.svg"
       },
       {
         "command": "whichTerminal.openAs",
-        "title": "Which Terminal: Open new terminal as..."
+        "category": "Which Terminal",
+        "title": "Open new terminal as..."
       },
       {
         "command": "whichTerminal.switch",
-        "title": "Which Terminal: Switch terminal"
+        "category": "Which Terminal",
+        "title": "Switch terminal"
       },
       {
         "command": "whichTerminal.switchNext",
-        "title": "Which Terminal: Switch to the next open terminal"
+        "category": "Which Terminal",
+        "title": "Switch to the next open terminal"
       },
       {
         "command": "whichTerminal.killAll",
-        "title": "Which Terminal: Kill all terminals",
-        "icon": "$(trashcan)"
+        "category": "Which Terminal",
+        "title": "Kill all terminals",
+        "icon": {
+          "dark": "resources/trashcan.svg",
+          "light": "resources/trashcan.svg"
+        }
       },
       {
         "command": "whichTerminal.kill",
-        "title": "Which Terminal: Kill current active terminal",
-        "icon": "$(trashcan)"
+        "category": "Which Terminal",
+        "title": "Kill current active terminal",
+        "icon": {
+          "dark": "resources/trashcan.svg",
+          "light": "resources/trashcan.svg"
+        }
       }
     ],
     "keybindings": [
@@ -65,15 +79,6 @@
         "key": "Ctrl+Alt+w"
       }
     ],
-    "viewsContainers": {
-      "activitybar": [
-        {
-          "id": "terminal-explorer",
-          "title": "Terminals",
-          "icon": "$(terminal)"
-        }
-      ]
-    },
     "views": {
       "explorer": [
         {
@@ -86,14 +91,18 @@
       "view/title": [
         {
           "command": "whichTerminal.open",
-          "group": "navigation"
+          "group": "navigation",
+          "when": "view == terminalExplorerView"
         },
         {
           "command": "whichTerminal.killAll",
-          "group": "navigation"
+          "group": "navigation",
+          "when": "view == terminalExplorerView"
         },
         {
-          "command": "whichTerminal.openAs"
+          "command": "whichTerminal.openAs",
+          "group": "rest",
+          "when": "view == terminalExplorerView"
         }
       ],
       "view/item/context": [
