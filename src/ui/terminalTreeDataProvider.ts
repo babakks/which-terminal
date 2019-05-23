@@ -15,6 +15,10 @@ export class TerminalTreeDataProvider
   constructor(private context: Context) {
     this.onDidChangeTreeData = this.eventEmitter.event;
     vscode.window.onDidOpenTerminal(this.onDidOpenTerminalHandler);
+    vscode.window.onDidCloseTerminal(this.onDidCloseTerminalHandler);
+    vscode.window.onDidChangeActiveTerminal(
+      this.onDidChangeActiveTerminalHandler
+    );
   }
 
   getTreeItem(
@@ -35,6 +39,18 @@ export class TerminalTreeDataProvider
 
   private onDidOpenTerminalHandler(e: vscode.Terminal) {
     this.items.set(e, this.createTreeItem(e));
+    this.notifyChange(e);
+  }
+
+  private onDidCloseTerminalHandler(e: vscode.Terminal) {
+    this.items.delete(e);
+    this.notifyChange(e);
+  }
+
+  private onDidChangeActiveTerminalHandler(e: vscode.Terminal | undefined) {
+    if (!e) {
+      return;
+    }
     this.notifyChange(e);
   }
 
