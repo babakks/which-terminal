@@ -14,11 +14,14 @@ export class TerminalTreeDataProvider
 
   constructor(private context: Context) {
     this.onDidChangeTreeData = this.eventEmitter.event;
-    vscode.window.onDidOpenTerminal(this.onDidOpenTerminalHandler);
-    vscode.window.onDidCloseTerminal(this.onDidCloseTerminalHandler);
+    vscode.window.onDidOpenTerminal(this.onDidOpenTerminalHandler, this);
+    vscode.window.onDidCloseTerminal(this.onDidCloseTerminalHandler, this);
     vscode.window.onDidChangeActiveTerminal(
-      this.onDidChangeActiveTerminalHandler
+      this.onDidChangeActiveTerminalHandler,
+      this
     );
+
+    this.populate();
   }
 
   getTreeItem(
@@ -30,15 +33,24 @@ export class TerminalTreeDataProvider
   getChildren(
     element?: vscode.Terminal
   ): vscode.ProviderResult<vscode.Terminal[]> {
-    return undefined;
+    return element ? undefined : Array.from(this.items.keys());
   }
 
-  private createTreeItem(terminal: vscode.Terminal): TerminalTreeItem {
+  private populate() {
+    if (!vscode.window.terminals.length) {
+      return;
+    }
+
+    vscode.window.terminals.forEach(x => this.addTreeItem(x));
+  }
+
+  private addTreeItem(terminal: vscode.Terminal) {
+    this.items.set(terminal, new TerminalTreeItem(terminal));
     return new TerminalTreeItem(terminal);
   }
 
   private onDidOpenTerminalHandler(e: vscode.Terminal) {
-    this.items.set(e, this.createTreeItem(e));
+    this.addTreeItem(e);
     this.notifyChange(e);
   }
 
@@ -55,6 +67,6 @@ export class TerminalTreeDataProvider
   }
 
   private notifyChange(item: vscode.Terminal) {
-    this.eventEmitter.fire(item);
+    this.eventEmitter.fire();
   }
 }
