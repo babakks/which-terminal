@@ -6,40 +6,39 @@ import { VisualTerminal } from "../model/visualTerminal";
 import { OpenTerminalEventArgs } from "../model/eventArgs/openTerminalEventArgs";
 
 export class TerminalTreeDataProvider
-  implements vscode.TreeDataProvider<VisualTerminal> {
-  private items: Map<VisualTerminal, TerminalTreeItem> = new Map();
-  private eventEmitter = new vscode.EventEmitter<VisualTerminal>();
+  implements vscode.TreeDataProvider<vscode.Terminal> {
+  private items: Map<vscode.Terminal, TerminalTreeItem> = new Map();
+  private eventEmitter = new vscode.EventEmitter<vscode.Terminal>();
 
-  onDidChangeTreeData: vscode.Event<VisualTerminal>;
+  onDidChangeTreeData: vscode.Event<vscode.Terminal>;
 
   constructor(private context: Context) {
     this.onDidChangeTreeData = this.eventEmitter.event;
-    vscode.window.onDidOpenTerminal()
-    this.context.onDidOpenTerminal.subscribe(this.onDidOpenTerminalHandler);
+    vscode.window.onDidOpenTerminal(this.onDidOpenTerminalHandler);
   }
 
   getTreeItem(
-    element: VisualTerminal
+    element: vscode.Terminal
   ): vscode.TreeItem | Thenable<vscode.TreeItem> {
     return this.items.get(element)!;
   }
 
   getChildren(
-    element?: VisualTerminal
-  ): vscode.ProviderResult<VisualTerminal[]> {
+    element?: vscode.Terminal
+  ): vscode.ProviderResult<vscode.Terminal[]> {
     return undefined;
   }
 
-  private createTreeItem(visualTerminal: VisualTerminal): TerminalTreeItem {
-    return new TerminalTreeItem(visualTerminal);
+  private createTreeItem(terminal: vscode.Terminal): TerminalTreeItem {
+    return new TerminalTreeItem(terminal);
   }
 
-  private onDidOpenTerminalHandler(e: vscode.Terminal) {    
-    this.items.set(e.visualTerminal, this.createTreeItem(e.visualTerminal));
-    this.notifyChange(e.visualTerminal);
+  private onDidOpenTerminalHandler(e: vscode.Terminal) {
+    this.items.set(e, this.createTreeItem(e));
+    this.notifyChange(e);
   }
 
-  private notifyChange(item: VisualTerminal) {
+  private notifyChange(item: vscode.Terminal) {
     this.eventEmitter.fire(item);
   }
 }

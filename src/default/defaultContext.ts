@@ -29,10 +29,6 @@ export class DefaultContext implements Context {
    */
   private openedTerminals = new Map<vscode.Terminal, Terminal>();
 
-  onDidOpenTerminal: ISimpleEvent<
-    OpenTerminalEventArgs
-  > = new SimpleEventDispatcher();
-
   /**
    * Creates an instance of `DefaultContext`.
    *

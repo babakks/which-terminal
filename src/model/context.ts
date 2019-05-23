@@ -19,14 +19,6 @@ export interface Context {
   state: State;
 
   /**
-   * Fires when a new open terminal is opened.
-   *
-   * @type {ISimpleEvent<OpenTerminalEventArgs>}
-   * @memberof Context
-   */
-  onDidOpenTerminal: ISimpleEvent<OpenTerminalEventArgs>;
-
-  /**
    * Asks for a shell template to sets as default integrated shell.
    *
    * @returns {Promise<void>}
