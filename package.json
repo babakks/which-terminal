@@ -25,7 +25,8 @@
       },
       {
         "command": "whichTerminal.open",
-        "title": "Which Terminal: Open new terminal"
+        "title": "Which Terminal: Open new terminal",
+        "icon": "$(plus)"
       },
       {
         "command": "whichTerminal.openAs",
@@ -40,12 +41,14 @@
         "title": "Which Terminal: Switch to the next open terminal"
       },
       {
-        "command": "whichTerminal.closeAll",
-        "title": "Which Terminal: Close all terminals"
+        "command": "whichTerminal.killAll",
+        "title": "Which Terminal: Kill all terminals",
+        "icon": "$(trashcan)"
       },
       {
-        "command": "whichTerminal.close",
-        "title": "Which Terminal: Closes current active terminal"
+        "command": "whichTerminal.kill",
+        "title": "Which Terminal: Kill current active terminal",
+        "icon": "$(trashcan)"
       }
     ],
     "keybindings": [
@@ -58,10 +61,48 @@
         "key": "Ctrl+Alt+`"
       },
       {
-        "command": "whichTerminal.close",
+        "command": "whichTerminal.kill",
         "key": "Ctrl+Alt+w"
       }
     ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "terminal-explorer",
+          "title": "Terminals",
+          "icon": "$(terminal)"
+        }
+      ]
+    },
+    "views": {
+      "explorer": [
+        {
+          "id": "terminalExplorerView",
+          "name": "Open terminals"
+        }
+      ]
+    },
+    "menus": {
+      "view/title": [
+        {
+          "command": "whichTerminal.open",
+          "group": "navigation"
+        },
+        {
+          "command": "whichTerminal.killAll",
+          "group": "navigation"
+        },
+        {
+          "command": "whichTerminal.openAs"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "whichTerminal.kill",
+          "group": "inline"
+        }
+      ]
+    },
     "configuration": {
       "title": "Which Terminal?",
       "properties": {
@@ -284,6 +325,7 @@
     "vscode": "^1.1.28"
   },
   "dependencies": {
+    "strongly-typed-events": "^1.4.10",
     "vscode-nls": "^4.1.0"
   }
 }

@@ -9,6 +9,8 @@ import { State } from "../model/state";
 
 import * as vscode from "vscode";
 import * as nls from "vscode-nls";
+import { ISimpleEvent, SimpleEventDispatcher } from "ste-simple-events";
+import { OpenTerminalEventArgs } from "../model/eventArgs/openTerminalEventArgs";
 
 const localize = nls.config()();
 
@@ -26,6 +28,10 @@ export class DefaultContext implements Context {
    * @memberof DefaultContext
    */
   private openedTerminals = new Map<vscode.Terminal, Terminal>();
+
+  onDidOpenTerminal: ISimpleEvent<
+    OpenTerminalEventArgs
+  > = new SimpleEventDispatcher();
 
   /**
    * Creates an instance of `DefaultContext`.
@@ -151,7 +157,7 @@ export class DefaultContext implements Context {
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async closeAllTerminals(): Promise<void> {
+  async killAllTerminals(): Promise<void> {
     vscode.window.terminals.forEach(x => x.dispose());
   }
 
@@ -161,7 +167,7 @@ export class DefaultContext implements Context {
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async closeCurrentTerminal(): Promise<void> {
+  async killCurrentTerminal(): Promise<void> {
     if (!vscode.window.activeTerminal) {
       return;
     }

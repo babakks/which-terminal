@@ -42,13 +42,13 @@ export function activate(context: vscode.ExtensionContext) {
       me
     ),
     vscode.commands.registerCommand(
-      "whichTerminal.closeAll",
-      me.closeAllTerminals,
+      "whichTerminal.killAll",
+      me.killAllTerminals,
       me
     ),
     vscode.commands.registerCommand(
-      "whichTerminal.close",
-      me.closeCurrentTerminal,
+      "whichTerminal.kill",
+      me.killCurrentTerminal,
       me
     )
   );

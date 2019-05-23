@@ -1,4 +1,7 @@
 import { State } from "./state";
+import { ISimpleEvent } from "strongly-typed-events";
+import { Terminal } from "./terminal";
+import { OpenTerminalEventArgs } from "./eventArgs/openTerminalEventArgs";
 
 /**
  * Defines extension behaviors and data.
@@ -14,6 +17,14 @@ export interface Context {
    * @memberof Context
    */
   state: State;
+
+  /**
+   * Fires when a new open terminal is opened.
+   *
+   * @type {ISimpleEvent<OpenTerminalEventArgs>}
+   * @memberof Context
+   */
+  onDidOpenTerminal: ISimpleEvent<OpenTerminalEventArgs>;
 
   /**
    * Asks for a shell template to sets as default integrated shell.
@@ -73,7 +84,7 @@ export interface Context {
    * @returns {Promise<void>}
    * @memberof Context
    */
-  closeAllTerminals(): Promise<void>;
+  killAllTerminals(): Promise<void>;
 
   /**
    * Closes current open terminal.
@@ -81,5 +92,5 @@ export interface Context {
    * @returns {Promise<void>}
    * @memberof Context
    */
-  closeCurrentTerminal(): Promise<void>;
+  killCurrentTerminal(): Promise<void>;
 }
