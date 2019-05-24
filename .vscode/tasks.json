@@ -14,11 +14,16 @@
       "group": {
         "kind": "build",
         "isDefault": true
-      }      
+      }
     },
     {
       "type": "npm",
       "script": "test-all-but-extension",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "compile",
       "problemMatcher": []
     }
   ]

@@ -29,7 +29,10 @@
         "command": "whichTerminal.open",
         "category": "Which Terminal",
         "title": "Open new terminal",
-        "icon": "resources/plus.svg"
+        "icon": {          
+          "dark": "./resources/dark/plus.svg",
+          "light": "./resources/light/plus.svg"
+        }
       },
       {
         "command": "whichTerminal.openAs",
@@ -51,8 +54,8 @@
         "category": "Which Terminal",
         "title": "Kill all terminals",
         "icon": {
-          "dark": "resources/trashcan.svg",
-          "light": "resources/trashcan.svg"
+          "dark": "./resources/dark/trashcan.svg",
+          "light": "./resources/light/trashcan.svg"
         }
       },
       {
@@ -60,8 +63,8 @@
         "category": "Which Terminal",
         "title": "Kill current active terminal",
         "icon": {
-          "dark": "resources/trashcan.svg",
-          "light": "resources/trashcan.svg"
+          "dark": "./resources/dark/trashcan.svg",
+          "light": "./resources/light/trashcan.svg"
         }
       }
     ],
@@ -108,7 +111,8 @@
       "view/item/context": [
         {
           "command": "whichTerminal.kill",
-          "group": "inline"
+          "group": "inline",
+          "when": "view == terminalExplorerView"
         }
       ]
     },

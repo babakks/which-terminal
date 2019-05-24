@@ -1,0 +1,7 @@
+.octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: #666666;
+  color: #666666;
+  visibility: hidden !important;
+}

@@ -1,5 +1,9 @@
 .octicon {
   display: inline-block;
   vertical-align: text-top;
-  fill: currentColor;
+  fill: red !important; 
+}
+
+.a {
+  fill: red
 }
