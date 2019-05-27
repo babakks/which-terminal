@@ -13,9 +13,13 @@ export class TerminalTreeDataProvider
   constructor(private _vm: TerminalTreeViewModel) {
     this.onDidChangeTreeData = this._eventEmitter.event;
 
-    this._vm.onDidAddItem.subscribe(this.onDidAddItemHandler);
-    this._vm.onDidDeleteItem.subscribe(this.onDidDeleteItemHandler);
-    this._vm.onDidChangeItems.subscribe(this.onDidChangeItemsHandler);
+    this.populate(_vm.items);
+
+    this._vm.onDidAddItem.subscribe(this.onDidAddItemHandler.bind(this));
+    this._vm.onDidDeleteItem.subscribe(this.onDidDeleteItemHandler.bind(this));
+    this._vm.onDidChangeItems.subscribe(
+      this.onDidChangeItemsHandler.bind(this)
+    );
   }
 
   getTreeItem(
@@ -36,21 +40,34 @@ export class TerminalTreeDataProvider
     return element ? undefined : this._vm.items;
   }
 
+  private populate(items: TerminalTreeItemViewModel[]) {
+    items.forEach(x => this.addItem(x));
+  }
+
+  private addItem(vm: TerminalTreeItemViewModel) {
+    const result = new TerminalTreeItem(vm);
+    this._map.set(vm, result);
+  }
+
+  private deleteItem(vm: TerminalTreeItemViewModel) {
+    this._map.delete(vm);
+  }
+
   private onDidAddItemHandler(e: TerminalTreeItemViewModel) {
     if (this._map.has(e)) {
       return;
     }
-    this._map.set(e, new TerminalTreeItem(e));
-    this.notifyChange(e);
+    this.addItem(e);    
+    this.notifyChange();
   }
 
   private onDidDeleteItemHandler(e: TerminalTreeItemViewModel) {
-    this._map.delete(e);
-    this.notifyChange(e);
+    this.deleteItem(e);
+    this.notifyChange();    
   }
 
   private onDidChangeItemsHandler(e: TerminalTreeItemViewModel | undefined) {
-    this.notifyChange(e);
+    this.notifyChange();
   }
 
   private notifyChange(item?: TerminalTreeItemViewModel) {

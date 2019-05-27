@@ -1,34 +1,32 @@
 import { TerminalTreeItemViewModel } from "./terminalTreeItemViewModel";
 import * as vscode from "vscode";
 import { ISimpleEvent, SimpleEventDispatcher } from "ste-simple-events";
-import { EventEmitter } from "events";
+
+declare type Dispatcher<T> = SimpleEventDispatcher<T>;
+declare type Event = Dispatcher<TerminalTreeItemViewModel>;
+declare type EventU = Dispatcher<TerminalTreeItemViewModel | undefined>;
+declare type IEvent = ISimpleEvent<TerminalTreeItemViewModel>;
+declare type IEventU = ISimpleEvent<TerminalTreeItemViewModel | undefined>;
 
 export class TerminalTreeViewModel {
   private _map: Map<vscode.Terminal, TerminalTreeItemViewModel> = new Map();
-
-  private _onDidChangeItemsDispatcher = new SimpleEventDispatcher<
-    TerminalTreeItemViewModel | undefined
-  >();
-  private _onDidAddItemDispatcher = new SimpleEventDispatcher<
-    TerminalTreeItemViewModel
-  >();
-  private _onDidDeleteItemDispatcher = new SimpleEventDispatcher<
-    TerminalTreeItemViewModel
-  >();
+  private _onDidChangeItemsDispatcher: EventU = new SimpleEventDispatcher();
+  private _onDidAddItemDispatcher: Event = new SimpleEventDispatcher();
+  private _onDidDeleteItemDispatcher: Event = new SimpleEventDispatcher();
 
   get items(): TerminalTreeItemViewModel[] {
     return Array.from(this._map.values());
   }
 
-  get onDidChangeItems(): ISimpleEvent<TerminalTreeItemViewModel | undefined> {
+  get onDidChangeItems(): IEventU {
     return this._onDidChangeItemsDispatcher.asEvent();
   }
 
-  get onDidAddItem(): ISimpleEvent<TerminalTreeItemViewModel> {
+  get onDidAddItem(): IEvent {
     return this._onDidAddItemDispatcher.asEvent();
   }
 
-  get onDidDeleteItem(): ISimpleEvent<TerminalTreeItemViewModel> {
+  get onDidDeleteItem(): IEvent {
     return this._onDidDeleteItemDispatcher.asEvent();
   }
 
@@ -79,10 +77,7 @@ export class TerminalTreeViewModel {
   }
 
   private onDidChangeActiveTerminalHandler(e: vscode.Terminal | undefined) {
-    if (!e) {
-      return;
-    }
-    this._onDidChangeItemsDispatcher.dispatch(this.getItem(e));
+    this._onDidChangeItemsDispatcher.dispatch(e ? this.getItem(e) : undefined);
   }
   //#endregion
 }
