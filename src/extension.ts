@@ -4,15 +4,20 @@ import { getPlatform } from "./model/platform";
 import { DefaultState } from "./default/state/defaultState";
 import { Context } from "./model/context";
 import { State } from "./model/state";
-import { TerminalTreeDataProvider } from "./ui/terminalTreeDataProvider";
+import { TerminalTreeDataProvider } from "./ui/view/terminalTreeDataProvider";
+import { TerminalTreeViewModel } from "./ui/viewModel/terminalTreeViewModel";
+import { TerminalTreeItemViewModel } from "./ui/viewModel/terminalTreeItemViewModel";
 
 export function activate(context: vscode.ExtensionContext) {
   const platform = getPlatform();
   const state: State = new DefaultState(platform, context);
   const me: Context = new DefaultContext(platform, context, state);
 
-  const dp = new TerminalTreeDataProvider();
-  vscode.window.registerTreeDataProvider("terminalExplorerView", dp);
+  const treeViewModel = new TerminalTreeViewModel();
+  const options: vscode.TreeViewOptions<TerminalTreeItemViewModel> = {
+    treeDataProvider: new TerminalTreeDataProvider(treeViewModel)
+  };
+  const tree = vscode.window.createTreeView("terminalExplorerView", options);
 
   context.subscriptions.push(
     vscode.commands.registerCommand(
@@ -51,9 +56,18 @@ export function activate(context: vscode.ExtensionContext) {
       me
     ),
     vscode.commands.registerCommand(
-      "whichTerminal.kill",
-      me.killCurrentTerminal,
+      "whichTerminal.killActive",
+      me.killActiveTerminal,
       me
+    )
+  );
+
+  context.subscriptions.push(
+    vscode.commands.registerCommand(
+      "whichTerminal.killTreeItemTerminal",
+      (item: TerminalTreeItemViewModel) => {
+        item.terminal.dispose();
+      }
     )
   );
 }

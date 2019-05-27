@@ -29,7 +29,7 @@
         "command": "whichTerminal.open",
         "category": "Which Terminal",
         "title": "Open new terminal",
-        "icon": {          
+        "icon": {
           "dark": "./resources/dark/plus.svg",
           "light": "./resources/light/plus.svg"
         }
@@ -59,9 +59,18 @@
         }
       },
       {
-        "command": "whichTerminal.kill",
+        "command": "whichTerminal.killActive",
         "category": "Which Terminal",
-        "title": "Kill current active terminal",
+        "title": "Kill active terminal",
+        "icon": {
+          "dark": "./resources/dark/trashcan.svg",
+          "light": "./resources/light/trashcan.svg"
+        }
+      },
+      {
+        "command": "whichTerminal.killTreeItemTerminal",
+        "category": "Which Terminal (tree items)",
+        "title": "Kill",
         "icon": {
           "dark": "./resources/dark/trashcan.svg",
           "light": "./resources/light/trashcan.svg"
@@ -78,7 +87,7 @@
         "key": "Ctrl+Alt+`"
       },
       {
-        "command": "whichTerminal.kill",
+        "command": "whichTerminal.killActive",
         "key": "Ctrl+Alt+w"
       }
     ],
@@ -110,7 +119,7 @@
       ],
       "view/item/context": [
         {
-          "command": "whichTerminal.kill",
+          "command": "whichTerminal.killTreeItemTerminal",
           "group": "inline",
           "when": "view == terminalExplorerView"
         }

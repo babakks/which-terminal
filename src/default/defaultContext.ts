@@ -158,12 +158,12 @@ export class DefaultContext implements Context {
   }
 
   /**
-   * Closes current open terminal.
+   * Closes active open terminal.
    *
    * @returns {Promise<void>}
    * @memberof DefaultContext
    */
-  async killCurrentTerminal(): Promise<void> {
+  async killActiveTerminal(): Promise<void> {
     if (!vscode.window.activeTerminal) {
       return;
     }

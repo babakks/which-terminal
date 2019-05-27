@@ -79,10 +79,10 @@ export interface Context {
   killAllTerminals(): Promise<void>;
 
   /**
-   * Closes current open terminal.
+   * Closes current active terminal.
    *
    * @returns {Promise<void>}
    * @memberof Context
    */
-  killCurrentTerminal(): Promise<void>;
+  killActiveTerminal(): Promise<void>;
 }
