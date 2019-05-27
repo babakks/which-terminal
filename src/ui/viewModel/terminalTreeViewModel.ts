@@ -5,8 +5,15 @@ import { EventEmitter } from "events";
 
 export class TerminalTreeViewModel {
   private _map: Map<vscode.Terminal, TerminalTreeItemViewModel> = new Map();
-  private _dispatcher = new SimpleEventDispatcher<
+
+  private _onDidChangeItemsDispatcher = new SimpleEventDispatcher<
     TerminalTreeItemViewModel | undefined
+  >();
+  private _onDidAddItemDispatcher = new SimpleEventDispatcher<
+    TerminalTreeItemViewModel
+  >();
+  private _onDidDeleteItemDispatcher = new SimpleEventDispatcher<
+    TerminalTreeItemViewModel
   >();
 
   get items(): TerminalTreeItemViewModel[] {
@@ -14,7 +21,15 @@ export class TerminalTreeViewModel {
   }
 
   get onDidChangeItems(): ISimpleEvent<TerminalTreeItemViewModel | undefined> {
-    return this._dispatcher.asEvent();
+    return this._onDidChangeItemsDispatcher.asEvent();
+  }
+
+  get onDidAddItem(): ISimpleEvent<TerminalTreeItemViewModel> {
+    return this._onDidAddItemDispatcher.asEvent();
+  }
+
+  get onDidDeleteItem(): ISimpleEvent<TerminalTreeItemViewModel> {
+    return this._onDidDeleteItemDispatcher.asEvent();
   }
 
   constructor() {
@@ -43,10 +58,12 @@ export class TerminalTreeViewModel {
     return result;
   }
 
-  private deleteItem(
-    key: vscode.Terminal
-  ): TerminalTreeItemViewModel | undefined {
+  private deleteItem(key: vscode.Terminal): TerminalTreeItemViewModel {
     const result = this._map.get(key);
+    if (!result) {
+      throw new Error("ViewModel for the given key is missing.");
+    }
+
     this._map.delete(key);
     return result;
   }
@@ -54,22 +71,18 @@ export class TerminalTreeViewModel {
 
   //#region Event listeners
   private onDidOpenTerminalHandler(e: vscode.Terminal) {
-    this.notifyChange(this.addItem(e));
+    this._onDidAddItemDispatcher.dispatch(this.addItem(e));
   }
 
   private onDidCloseTerminalHandler(e: vscode.Terminal) {
-    this.notifyChange(this.deleteItem(e));
+    this._onDidDeleteItemDispatcher.dispatch(this.deleteItem(e));
   }
 
   private onDidChangeActiveTerminalHandler(e: vscode.Terminal | undefined) {
     if (!e) {
       return;
     }
-    this.notifyChange(this.getItem(e));
+    this._onDidChangeItemsDispatcher.dispatch(this.getItem(e));
   }
   //#endregion
-
-  private notifyChange(item: TerminalTreeItemViewModel | undefined) {
-    this._dispatcher.dispatch(item);
-  }
 }

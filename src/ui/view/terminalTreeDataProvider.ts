@@ -12,9 +12,10 @@ export class TerminalTreeDataProvider
 
   constructor(private _vm: TerminalTreeViewModel) {
     this.onDidChangeTreeData = this._eventEmitter.event;
-    _vm.onDidChangeItems.subscribe(e => {
-      this.notifyChange(e);
-    });
+
+    this._vm.onDidAddItem.subscribe(this.onDidAddItemHandler);
+    this._vm.onDidDeleteItem.subscribe(this.onDidDeleteItemHandler);
+    this._vm.onDidChangeItems.subscribe(this.onDidChangeItemsHandler);
   }
 
   getTreeItem(
@@ -33,6 +34,23 @@ export class TerminalTreeDataProvider
     element?: TerminalTreeItemViewModel
   ): vscode.ProviderResult<TerminalTreeItemViewModel[]> {
     return element ? undefined : this._vm.items;
+  }
+
+  private onDidAddItemHandler(e: TerminalTreeItemViewModel) {
+    if (this._map.has(e)) {
+      return;
+    }
+    this._map.set(e, new TerminalTreeItem(e));
+    this.notifyChange(e);
+  }
+
+  private onDidDeleteItemHandler(e: TerminalTreeItemViewModel) {
+    this._map.delete(e);
+    this.notifyChange(e);
+  }
+
+  private onDidChangeItemsHandler(e: TerminalTreeItemViewModel | undefined) {
+    this.notifyChange(e);
   }
 
   private notifyChange(item?: TerminalTreeItemViewModel) {
