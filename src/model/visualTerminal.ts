@@ -8,7 +8,6 @@ import { Terminal } from "./terminal";
  * @interface VisualTerminal
  */
 export interface VisualTerminal {
-  
   /**
    * Terminal model associated to the visually created terminal.
    *
