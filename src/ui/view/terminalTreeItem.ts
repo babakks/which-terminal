@@ -6,8 +6,10 @@ export class TerminalTreeItem extends vscode.TreeItem {
     super(vm.terminal.name);
     this.id = TerminalTreeItem.getNewId();
     this.iconPath = {
-      light: `${__dirname}/../../resources/light/terminal.svg`,
-      dark: `${__dirname}/../../resources/dark/terminal.svg`
+      light: vscode.Uri.file(
+        __dirname + "/../../../resources/light/terminal.svg"
+      ),
+      dark: vscode.Uri.file(__dirname + "/../../../resources/dark/terminal.svg")
     };
   }
 
