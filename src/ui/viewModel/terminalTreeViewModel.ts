@@ -1,33 +1,22 @@
 import { TerminalTreeItemViewModel } from "./terminalTreeItemViewModel";
 import * as vscode from "vscode";
-import { ISimpleEvent, SimpleEventDispatcher } from "ste-simple-events";
 
-declare type Dispatcher<T> = SimpleEventDispatcher<T>;
-declare type Event = Dispatcher<TerminalTreeItemViewModel>;
-declare type EventU = Dispatcher<TerminalTreeItemViewModel | undefined>;
-declare type IEvent = ISimpleEvent<TerminalTreeItemViewModel>;
-declare type IEventU = ISimpleEvent<TerminalTreeItemViewModel | undefined>;
+declare type Emitter<T> = vscode.EventEmitter<T>;
+declare type Event = Emitter<TerminalTreeItemViewModel>;
+declare type EventU = Emitter<TerminalTreeItemViewModel | undefined>;
 
 export class TerminalTreeViewModel {
-  private _map: Map<vscode.Terminal, TerminalTreeItemViewModel> = new Map();
-  private _onDidChangeItemsDispatcher: EventU = new SimpleEventDispatcher();
-  private _onDidAddItemDispatcher: Event = new SimpleEventDispatcher();
-  private _onDidDeleteItemDispatcher: Event = new SimpleEventDispatcher();
+  private map: Map<vscode.Terminal, TerminalTreeItemViewModel> = new Map();
+  private onDidChangeItemsEmitter: EventU = new vscode.EventEmitter();
+  private onDidAddItemEmitter: Event = new vscode.EventEmitter();
+  private onDidDeleteItemEmitter: Event = new vscode.EventEmitter();
+
+  onDidChangeItems = this.onDidChangeItemsEmitter.event;
+  onDidAddItem = this.onDidAddItemEmitter.event;
+  onDidDeleteItem = this.onDidDeleteItemEmitter.event;
 
   get items(): TerminalTreeItemViewModel[] {
-    return Array.from(this._map.values());
-  }
-
-  get onDidChangeItems(): IEventU {
-    return this._onDidChangeItemsDispatcher.asEvent();
-  }
-
-  get onDidAddItem(): IEvent {
-    return this._onDidAddItemDispatcher.asEvent();
-  }
-
-  get onDidDeleteItem(): IEvent {
-    return this._onDidDeleteItemDispatcher.asEvent();
+    return Array.from(this.map.values());
   }
 
   constructor() {
@@ -47,37 +36,37 @@ export class TerminalTreeViewModel {
   }
 
   private getItem(key: vscode.Terminal): TerminalTreeItemViewModel | undefined {
-    return this._map.get(key);
+    return this.map.get(key);
   }
 
   private addItem(key: vscode.Terminal): TerminalTreeItemViewModel {
     const result = new TerminalTreeItemViewModel(key);
-    this._map.set(key, result);
+    this.map.set(key, result);
     return result;
   }
 
   private deleteItem(key: vscode.Terminal): TerminalTreeItemViewModel {
-    const result = this._map.get(key);
+    const result = this.map.get(key);
     if (!result) {
       throw new Error("ViewModel for the given key is missing.");
     }
 
-    this._map.delete(key);
+    this.map.delete(key);
     return result;
   }
   //#endregion
 
   //#region Event listeners
   private onDidOpenTerminalHandler(e: vscode.Terminal) {
-    this._onDidAddItemDispatcher.dispatch(this.addItem(e));
+    this.onDidAddItemEmitter.fire(this.addItem(e));
   }
 
   private onDidCloseTerminalHandler(e: vscode.Terminal) {
-    this._onDidDeleteItemDispatcher.dispatch(this.deleteItem(e));
+    this.onDidDeleteItemEmitter.fire(this.deleteItem(e));
   }
 
   private onDidChangeActiveTerminalHandler(e: vscode.Terminal | undefined) {
-    this._onDidChangeItemsDispatcher.dispatch(e ? this.getItem(e) : undefined);
+    this.onDidChangeItemsEmitter.fire(e ? this.getItem(e) : undefined);
   }
   //#endregion
 }
