@@ -4,11 +4,7 @@ import { DefaultTerminalArray } from "./defaultTerminalArray";
 
 export class DefaultConfiguration implements Configuration {
   constructor(
-    public recentTerminalsListSize: number,
-
-
-
-    
+    public recentTerminalsListSize: number,    
     public windowsTerminals: TerminalArray,
     public linuxTerminals: TerminalArray,
     public osxTerminals: TerminalArray
