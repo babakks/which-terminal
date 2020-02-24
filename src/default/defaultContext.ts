@@ -2,7 +2,7 @@ import { Context } from "../model/context";
 import { Configuration } from "../model/configuration";
 import { DefaultConfiguration } from "./defaultConfiguration";
 import { TerminalArray } from "../model/terminalArray";
-import { DefaultTerminalArray } from "./DefaultTerminalArray";
+import { DefaultTerminalArray } from "./defaultTerminalArray";
 import { Terminal } from "../model/terminal";
 import { Platform, onPlatform } from "../model/platform";
 import { State } from "../model/state";

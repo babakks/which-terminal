@@ -1,6 +1,6 @@
 import { Configuration, isConfiguration } from "../model/configuration";
 import { TerminalArray } from "../model/terminalArray";
-import { DefaultTerminalArray } from "./DefaultTerminalArray";
+import { DefaultTerminalArray } from "./defaultTerminalArray";
 
 export class DefaultConfiguration implements Configuration {
   constructor(
